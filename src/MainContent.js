@@ -3,6 +3,7 @@ import './MainContent.css';
 
 
 const MainContent = () => {
+    // eslint-disable-next-line no-unused-vars
   const [muted, setMuted] = useState(true);  // Controls the audio muting
 
   return (
