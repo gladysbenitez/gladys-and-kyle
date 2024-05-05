@@ -15,6 +15,7 @@ const LandingPage = ({ onEnter }) => {
       alert('Incorrect password!');
     }
   };
+  const [muted, setMuted] = useState(true);  // Controls the audio muting
 
   return (
     <div className="landing-page-background">
@@ -22,8 +23,8 @@ const LandingPage = ({ onEnter }) => {
         <source src="https://www.sugokuii-events.com/media/demo.mov" type="video/mp4" />
         </video> 
 
-        <audio autoPlay loop muted>
-        <source src="https://www.sugokuii-events.com/media/roberta-capri.mp3" type="audio/mpeg" />
+        <audio autoPlay loop muted={!muted}>
+            <source src="https://www.sugokuii-events.com/media/roberta-capri.mp3" type="audio/mpeg" />
         </audio>
         <div className="login-container">
         <h1 className='water-brush-regular'>Gladys and Kyle</h1>

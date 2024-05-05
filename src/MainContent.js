@@ -17,7 +17,6 @@ const MainContent = () => {
         <h1>2025</h1>
         <audio autoPlay loop muted={!muted}>
           <source src="https://www.sugokuii-events.com/media/abbronzatissima-sugoworld.mp3" type="audio/mpeg" />
-          Your browser does not support the audio tag.
         </audio>
         {/* <button onClick={() => setMuted(!muted)} style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer' }}>
           {muted ? 'Unmute' : 'Mute'}

@@ -82,7 +82,7 @@
     font-family: "Water Brush", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 100px;
+    font-size: 100px; 
   }
   
   .water-brush-semi {
@@ -90,5 +90,10 @@
     font-weight: 400;
     font-style: normal;
     font-size: 70px;
+  }
+  .audio-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
   }
   
