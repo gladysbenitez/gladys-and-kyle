@@ -27,7 +27,7 @@ const LandingPage = ({ onEnter }) => {
         </audio>
         <div className="login-container">
         <h1 className='water-brush-regular'>Gladys and Kyle</h1>
-      
+        <h1 className='water-brush-semi'>----Capri,Italy---</h1>
         <div className='login-form'>
             <input
                 type="password"
