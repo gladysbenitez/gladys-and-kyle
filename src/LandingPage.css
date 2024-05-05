@@ -1,0 +1,87 @@
+.landing-page-background {
+    position: relative; /* Essential for positioning children absolutely relative to this container */
+    width: 100%;
+    height: 100vh; /* Ensure it covers the full height of the viewport */
+    overflow: hidden; /* Keeps everything contained within the bounds of this div */
+    z-index: 1; /* May be required if other page elements interfere */
+}
+
+.video-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ensures the video covers the entire container */
+    object-fit: cover; /* Prevents distortion while filling the area */
+    z-index: -1; /* Places the video behind the login form */
+}
+
+.login-container {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 10 !important;
+    text-align: center;
+    color: white;
+    width: 100% !important; /* Adjust width as necessary */
+} 
+.login-form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align the items */
+    gap: 10px; /* Adds space between input and button */
+    margin-top: 20px; /* Extra spacing from the top */
+  } 
+  @media (max-width: 600px) {
+    .login-form input, .login-form button {
+      width: 80%; /* Larger width on smaller screens for better touch targets */
+    }
+  }
+
+  .login-form input {
+    width: 10%; /* Adjust width as necessary */
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white; /* Ensures the text color is white */
+    font-weight: semi-bold; /* Makes the text bold */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+  }
+  
+  .login-form input:focus {
+    border-color: #fff; /* Optional: Change focus border color to maintain visibility */
+  }
+  .login-form input::placeholder {
+    color: white; /* Sets placeholder text color to white */
+    opacity: 1; /* Ensures the placeholder text is not semi-transparent */
+  }
+  
+  .login-form button {
+    width: 6%; /* Relative width to its container */
+    padding: 10px;
+    font-size: 16px;
+    border: none; /* No border */
+    background-color: #ffffff; /* Solid white background */
+    color: #333; /* Dark text for contrast */
+    border-radius: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .login-form button:hover {
+    background-color: #f8f8f8; /* Light grey background on hover */
+  }
+  
+  
+.water-brush-regular {
+    font-family: "Water Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+  }
+  

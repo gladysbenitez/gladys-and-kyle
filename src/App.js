@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import LandingPage from './LandingPage';
+import MainContent from './MainContent'; // Assume you have this component
 
-function App() {
+const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleAuthentication = () => {
+    setIsAuthenticated(true);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>Gladys & Kyle Coming Soon!</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {!isAuthenticated ? (
+        <LandingPage onEnter={handleAuthentication} />
+      ) : (
+        <MainContent />
+      )}
     </div>
   );
-}
+};
 
 export default App;
