@@ -226,15 +226,11 @@ body, html {
     max-width: 30%; /* Limit width to 30% of the parent container */
     height: auto;
     z-index: 5;
-    opacity: 0; /* Start from invisible */
     animation-name: fadeIn; /* Reference to the keyframes animation */
     animation-duration: 6s; /* Duration of the animation */
     animation-fill-mode: forwards; 
   }
-  .top-image.visible {
-    opacity: 1; 
-  }
-  
+
   @media (max-width: 600px) {
     .top-image {
         position: absolute;
