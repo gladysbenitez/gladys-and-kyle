@@ -15,7 +15,7 @@ body, html {
     position: relative;
     width: 100%;
     height: 100vh;
-    background:'/images/abc.jpg' no-repeat center center;
+    background: url('../public/images/abc.jpg') no-repeat center center;
     background-size: cover; /* This ensures the background covers the entire area */
     overflow: hidden;
     z-index: 1;
@@ -46,6 +46,9 @@ body, html {
     }
     img.background-media {
       display: block; /* Show image on small screens */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
   
@@ -227,10 +230,10 @@ body, html {
   
   @media (max-width: 600px) {
     .top-image {
-        top: 10%; /* Adjust the vertical position to move the image up */
+        top: 30%; /* Adjust the vertical position to move the image up */
         left: 50%; /* Center it horizontally */
         transform: translate(-50%, 0); /* Correctly center the image horizontally */
-        max-width: 150px; /* Maintain a smaller size suitable for smaller screens */
+        max-width: 50%; /* Maintain a smaller size suitable for smaller screens */
         width: auto; /* Maintain aspect ratio */
         height: auto; /* Maintain aspect ratio */
         z-index: 5; /* Ensure it stays on top of the background but below interactive elements */
