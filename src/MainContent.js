@@ -8,7 +8,7 @@ const MainContent = () => {
 
   return (
     <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' }}>
-      <video autoPlay loop muted style={{ position: 'absolute', width: '100%', height: '100%', top: '0', left: '0', objectFit: 'cover' }}>
+      <video autoPlay playsinline disablePictureInPicture loop muted style={{ position: 'absolute', width: '100%', height: '100%', top: '0', left: '0', objectFit: 'cover' }}>
         <source src="https://www.sugokuii-events.com/worldofsugo-img/seawave.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
