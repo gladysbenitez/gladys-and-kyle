@@ -114,10 +114,22 @@ body, html {
   .landing-page-title {
     font-size: 100px;
   }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
   
   .landing-page-subtitle {
     font-size: 65px; 
     padding-top: 250px;
+    opacity: 0; /* Start from invisible */
+  animation-name: fadeIn; /* Reference to the keyframes animation */
+  animation-duration: 4s; /* Duration of the animation */
+  animation-fill-mode: forwards; 
   }
   
   /* Responsive Design Adjustments */
