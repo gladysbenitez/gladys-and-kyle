@@ -227,8 +227,12 @@ body, html {
   
   @media (max-width: 600px) {
     .top-image {
-      top:20%;
-      left: 50%; /* Keep it centered */
-      max-width: 150px; /* Increase max-width for smaller screens */
+        top: 10%; /* Adjust the vertical position to move the image up */
+        left: 50%; /* Center it horizontally */
+        transform: translate(-50%, 0); /* Correctly center the image horizontally */
+        max-width: 150px; /* Maintain a smaller size suitable for smaller screens */
+        width: auto; /* Maintain aspect ratio */
+        height: auto; /* Maintain aspect ratio */
+        z-index: 5; /* Ensure it stays on top of the background but below interactive elements */
     }
-  }
+}
