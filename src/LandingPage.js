@@ -20,27 +20,24 @@ const LandingPage = ({ onEnter }) => {
     }
   };
 
-  useEffect(() => {
+useEffect(() => {
     // Trigger the animation after a delay or when the component mounts
-     setMuted(!muted);
-
     const timer = setTimeout(() => {
       setVisible(true);
-    
     }, 1000); // Delay in milliseconds
-
     return () => clearTimeout(timer);
   }, []);
   
   return (
     <div className="landing-page-background">
-        <video  autoPlay="autoplay" loop="loop" muted={true} className="video-content">
+        <audio key='unmuted' autoPlay loop muted={!muted}>
+        <source src="https://www.sugokuii-events.com/media/roberta-capri.mp3" type="audio/mpeg" />
+      </audio>
+        <video  autoPlay loop muted={true} className="video-content">
         <source src="https://www.sugokuii-events.com/media/demo.mov" type="video/mp4" />
         </video> 
         <img src="/images/Piazzteta (3).png" alt="Descriptive Alt Text" className="top-image"/>
-        <audio autoPlay loop muted={muted}>
-        <source src="https://www.sugokuii-events.com/media/roberta-capri.mp3" type="audio/mpeg" />
-      </audio>
+      
         <div className="login-container">
         {/* <h1 className='landing-page-title'>Gladys and Kyle</h1> */}
         <h1 className={`landing-page-title ${visible ? 'visible' : ''}`}

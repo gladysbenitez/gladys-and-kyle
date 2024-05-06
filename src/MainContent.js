@@ -24,7 +24,6 @@ const MainContent = () => {
           {muted ? 'Unmute' : 'Mute'}
         </button> */}
       </div>
-      <img src="/images/Piazzteta (6).png" alt="Descriptive Alt Text" className="top-image"/>
 
     </div>
   );
