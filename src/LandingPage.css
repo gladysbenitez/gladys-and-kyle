@@ -84,6 +84,7 @@ body, html {
 
 /* Additional styles for text and buttons */
   .login-form input {
+    font-family: "Oswald", sans-serif;
     font-size: 16px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     background-color: rgba(255, 255, 255, 0.3);
@@ -105,14 +106,18 @@ body, html {
   }
   
   .login-form button {
+    font-family: "Oswald", sans-serif;
     font-size: 18px;
-    font-weight: semi-bold;
+    font-weight: bold;
     border: none;
     background-color: #ffffff;
     color: #35434d;
     cursor: pointer;
     transition: background-color 0.3s;
     width: 200px;
+    font-family: "Oswald", sans-serif;
+
+
   }
   
   .login-form button:hover {
@@ -203,10 +208,9 @@ body, html {
   }
   
   @media (max-width: 600px) {
-    .top-image {
-      top:20%;
-      left: 50%; /* Keep it centered */
+    .top-image { 
+    left: 0%; /* Keep it centered */
       max-width: 70%; /* Increase max-width for smaller screens */
-      transform: translateX(-50%); /* Ensure it remains centered */
+      transform: translateY(50%); /* Ensure it remains centered */
     }
   }
