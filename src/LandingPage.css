@@ -126,7 +126,7 @@ body, html {
     }
   
     .landing-page-subtitle {
-      font-size: 25px;
+      font-size: 40px;
     }
   
     .login-form {
@@ -145,8 +145,9 @@ body, html {
   
   @media (max-width: 600px) {
     .top-image {
+      top:10%;
       left: 50%; /* Keep it centered */
       max-width: 70%; /* Increase max-width for smaller screens */
-      transform: translateX(-40%); /* Ensure it remains centered */
+      transform: translateX(-50%); /* Ensure it remains centered */
     }
   }
