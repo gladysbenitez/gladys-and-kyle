@@ -136,18 +136,17 @@ body, html {
   .top-image {
     position: absolute;
     top: 0;
-    left: 35%;
-    max-width: 30%; 
+    left: 50%; /* Center the image horizontally */
+    transform: translateX(-50%); /* Shift it back by half of its width to truly center it */
+    max-width: 30%; /* Limit width to 30% of the parent container */
     height: auto;
-    z-index: 5; 
+    z-index: 5;
   }
+  
   @media (max-width: 600px) {
     .top-image {
-        position: absolute;
-        top: 0;
-        left: 35%;
-        max-width: 70%; 
-        height: auto;
-        z-index: 5; 
+      left: 50%; /* Keep it centered */
+      max-width: 70%; /* Increase max-width for smaller screens */
+      transform: translateX(-50%); /* Ensure it remains centered */
     }
   }
