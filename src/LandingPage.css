@@ -64,7 +64,6 @@ body, html {
   @media (max-width: 600px) {
     .login-form {
       width: 80%; /* Slightly more width for small devices */
-       top: calc(50% - 20px); /* Moves the login form up by 20px */
     }
   
     .login-form input, .login-form button {
