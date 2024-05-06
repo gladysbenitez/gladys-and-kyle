@@ -143,6 +143,11 @@ body, html {
   }
   @media (max-width: 600px) {
     .top-image {
-      width: 70%; 
+        position: absolute;
+        top: 0;
+        left: 35%;
+        max-width: 70%; 
+        height: auto;
+        z-index: 5; 
     }
   }
