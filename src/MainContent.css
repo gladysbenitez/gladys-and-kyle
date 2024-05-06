@@ -17,12 +17,15 @@
 @media (max-width: 600px) {
     video.main-background-media {
         display: none; /* Hide video on smaller screens */
+        z-index: -1 !important;
     }
     img.main-background-media {
         display: block;  /* Show image on smaller screens */
         width: 100vw;
         height: 100vh;
         object-fit: cover;
+        z-index: -1 !important;
+
     }
 }
 
@@ -39,7 +42,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: 10 !important;
     color: white;
     text-align: center;
   }
