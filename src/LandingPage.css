@@ -122,11 +122,11 @@ body, html {
   /* Responsive Design Adjustments */
   @media (max-width: 600px) {
     .landing-page-title {
-      font-size: 24px;
+      font-size: 25px;
     }
   
     .landing-page-subtitle {
-      font-size: 18px;
+      font-size: 25px;
     }
   
     .login-form {
