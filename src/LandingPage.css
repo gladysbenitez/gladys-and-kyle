@@ -231,6 +231,9 @@ body, html {
     animation-duration: 6s; /* Duration of the animation */
     animation-fill-mode: forwards; 
   }
+  .top-image.visible {
+    opacity: 1; 
+  }
   
   @media (max-width: 600px) {
     .top-image {
