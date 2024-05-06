@@ -14,9 +14,9 @@ const MainContent = () => {
                 Your browser does not support the video tag.
             </video>
         <div className="center-container">
-            <h1>Coming Soon...</h1> 
-            <h1>- Capri, Italy -</h1>
-            <h1>2025</h1>
+            <h1 className='header-text'>Coming Soon...</h1> 
+            <h1 className='header-text'>- Capri, Italy -</h1>
+            <h1 className='header-text'>2025</h1>
             <audio autoPlay loop muted={!muted}>
             <source src="https://www.sugokuii-events.com/media/abbronzatissima-sugoworld.mp3" type="audio/mpeg" />
             </audio>

@@ -230,6 +230,7 @@ body, html {
   
   @media (max-width: 600px) {
     .top-image {
+        position: absolute;
         opacity: 0; /* Start from invisible */
         animation-name: fadeIn; /* Reference to the keyframes animation */
         animation-duration: 6s; /* Duration of the animation */
