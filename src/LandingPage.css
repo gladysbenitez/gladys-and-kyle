@@ -18,7 +18,17 @@ body, html {
     overflow: hidden;
     z-index: 1;
   }
-  
+
+  .landing-page-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Dark gray overlay, adjust opacity as needed */
+    z-index: 2; /* Ensures the overlay is above the background but below other content */
+}
   .video-content {
     position: absolute;
     top: 0;
@@ -31,7 +41,7 @@ body, html {
   
   .login-container {
     position: absolute;
-    top: 45%;
+    top: 65%;
     left: 50%; 
     transform: translate(-50%, -50%);
     z-index: 10;
@@ -46,7 +56,7 @@ body, html {
   
   /* Form Elements */
   .login-form {
-    margin-top:-40px;
+    margin-top:-20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,10 +67,10 @@ body, html {
   }
   
   .login-form input, .login-form button {
-    width: 100%; /* Full width to align nicely */
     padding: 12px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
   }
   @media (max-width: 600px) {
     .login-form {
@@ -80,11 +90,14 @@ body, html {
     color: white;
     font-weight: semi-bold;
     outline: none;
+    width: 170px;
   }
   
   .login-form input::placeholder {
     color: white;
     opacity: 1;
+    font-weight: bold;
+    text-align: center;
   }
   
   .login-form input:focus {
@@ -92,27 +105,36 @@ body, html {
   }
   
   .login-form button {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: semi-bold;
     border: none;
     background-color: #ffffff;
-    color: #333;
+    color: #35434d;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 200px;
   }
   
   .login-form button:hover {
-    background-color: #f8f8f8;
+    background-color: #89abdfcc;
+    color:#ffff
   }
   
   /* Typography */
   .landing-page-title, .landing-page-subtitle {
-    font-family: "Water Brush", cursive;
-    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
     font-style: normal;
   }
   
   .landing-page-title {
-    font-size: 100px;
+    font-size: 70px;
+    margin-bottom: -40px;
+    opacity: 0; /* Start from invisible */
+    animation: slideInLeft 2s ease-out forwards;
+    animation-duration: 3s; /* Duration of the animation */
+    animation-fill-mode: forwards; 
+
   }
   @keyframes fadeIn {
     from {
@@ -122,13 +144,33 @@ body, html {
       opacity: 1;
     }
   }
-  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-500%); /* Start from the left outside of the screen */
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0%); /* End at the center of the screen */
+      opacity: 1;
+    }
+  }
+  @keyframes slideInRight {
+    from {
+      transform: translateX(900%); /* Start from the left outside of the screen */
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0%); /* End at the center of the screen */
+      opacity: 1;
+    }
+  }
+
   .landing-page-subtitle {
     font-size: 65px; 
-    padding-top: 250px;
+    /* padding-top:-100PX; */
     opacity: 0; /* Start from invisible */
-  animation-name: fadeIn; /* Reference to the keyframes animation */
-  animation-duration: 4s; /* Duration of the animation */
+    animation: slideInRight 2s ease-out forwards;
+  animation-duration: 3s; /* Duration of the animation */
   animation-fill-mode: forwards; 
   }
   
@@ -154,6 +196,10 @@ body, html {
     max-width: 30%; /* Limit width to 30% of the parent container */
     height: auto;
     z-index: 5;
+    opacity: 0; /* Start from invisible */
+    animation-name: fadeIn; /* Reference to the keyframes animation */
+    animation-duration: 6s; /* Duration of the animation */
+    animation-fill-mode: forwards; 
   }
   
   @media (max-width: 600px) {

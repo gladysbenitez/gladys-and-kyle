@@ -9,6 +9,7 @@ const App = () => {
     setIsAuthenticated(true);
   };
 
+
   return (
     <div>
       {!isAuthenticated ? (
