@@ -1,4 +1,8 @@
 /* Base Styles */
+#preload-image {
+    display: none;
+    background-image: url('../public/images/Piazzteta (3).png');
+}
 body, html {
     margin: 0;
     padding: 0;
