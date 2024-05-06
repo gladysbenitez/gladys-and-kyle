@@ -33,9 +33,10 @@ useEffect(() => {
         <audio key='unmuted' autoPlay loop muted={!muted}>
         <source src="https://www.sugokuii-events.com/media/roberta-capri.mp3" type="audio/mpeg" />
       </audio>
-        <video  autoPlay loop muted={true} className="video-content">
+        <video className='background-media' autoPlay loop muted={true}>
         <source src="https://www.sugokuii-events.com/media/demo.mov" type="video/mp4" />
         </video> 
+        <img className='background-media' src='/images/abc.jpeg' alt="Background"></img>
         <img src="/images/Piazzteta (3).png" alt="Descriptive Alt Text" className="top-image"/>
       
         <div className="login-container">
