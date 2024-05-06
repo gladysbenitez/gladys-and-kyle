@@ -230,6 +230,10 @@ body, html {
   
   @media (max-width: 600px) {
     .top-image {
+        opacity: 0; /* Start from invisible */
+        animation-name: fadeIn; /* Reference to the keyframes animation */
+        animation-duration: 6s; /* Duration of the animation */
+        animation-fill-mode: forwards;
         top: 30%; /* Adjust the vertical position to move the image up */
         left: 50%; /* Center it horizontally */
         transform: translate(-50%, 0); /* Correctly center the image horizontally */
