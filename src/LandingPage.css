@@ -145,7 +145,7 @@ body, html {
   
   @media (max-width: 600px) {
     .top-image {
-      top:50%;
+      top:30%;
       left: 50%; /* Keep it centered */
       max-width: 70%; /* Increase max-width for smaller screens */
       transform: translateX(-50%); /* Ensure it remains centered */
