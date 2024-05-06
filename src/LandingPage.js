@@ -28,8 +28,8 @@ const LandingPage = ({ onEnter }) => {
             <source src="https://www.sugokuii-events.com/media/roberta-capri.mp3" type="audio/mpeg" />
         </audio>
         <div className="login-container">
-        <h1 className='title'>Gladys and Kyle</h1>
-        <h1 className='subtitle'>----Capri,Italy---</h1>
+        <h1 className='landing-page-title'>Gladys and Kyle</h1>
+        <h1 className='landing-page-subtitle'>----Capri,Italy---</h1>
         <div className='login-form'>
             <input
                 type="password"

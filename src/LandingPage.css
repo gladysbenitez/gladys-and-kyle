@@ -1,112 +1,135 @@
-.landing-page-background {
-    position: relative; /* Essential for positioning children absolutely relative to this container */
+/* Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+  }
+  
+  /* Utility Classes */
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Layout Containers */
+  .landing-page-background {
+    position: relative;
     width: 100%;
-    height: 100vh; /* Ensure it covers the full height of the viewport */
-    overflow: hidden; /* Keeps everything contained within the bounds of this div */
-    z-index: 1; /* May be required if other page elements interfere */
-}
-
-.video-content {
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .video-content {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Ensures the video covers the entire container */
-    object-fit: cover; /* Prevents distortion while filling the area */
-    z-index: -1; /* Places the video behind the login form */
-}
-
-.login-container {
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    z-index: 10 !important;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     color: white;
-    width: 100% !important; /* Adjust width as necessary */
-} 
-.login-form {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center-align the items */
-    gap: 10px; /* Adds space between input and button */
-    margin-top: 20px; /* Extra spacing from the top */
-    justify-content: center;
     width: 100%;
-    height: 100vh;
-  } 
+  }
+  
+  /* Form Elements */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 50%; /* Better control over form width */
+    max-width: 300px; /* Limits form size for better appearance on all devices */
+  }
+  
+  .login-form input, .login-form button {
+    width: 100%; /* Full width to align nicely */
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
   @media (max-width: 600px) {
+    .login-form {
+      width: 90%; /* Slightly more width for small devices */
+    }
+  
     .login-form input, .login-form button {
-      width: 90%; /* Increase or decrease based on preference */
-      margin: 0 auto; /* Center align the elements */
-      display: block; /* Ensure they stack vertically */
+      font-size: 14px; /* Slightly smaller font size for small devices */
     }
   }
 
+/* Additional styles for text and buttons */
   .login-form input {
-    width: 10%; /* Adjust width as necessary */
-    padding: 10px;
     font-size: 16px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     background-color: rgba(255, 255, 255, 0.3);
-    color: white; /* Ensures the text color is white */
-    font-weight: semi-bold; /* Makes the text bold */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: semi-bold;
     outline: none;
   }
   
-  .login-form input:focus {
-    border-color: #fff; /* Optional: Change focus border color to maintain visibility */
-  }
   .login-form input::placeholder {
-    color: white; /* Sets placeholder text color to white */
-    opacity: 1; /* Ensures the placeholder text is not semi-transparent */
+    color: white;
+    opacity: 1;
+  }
+  
+  .login-form input:focus {
+    border-color: #fff;
   }
   
   .login-form button {
-    width: 6%; /* Relative width to its container */
-    padding: 10px;
     font-size: 16px;
-    border: none; /* No border */
-    background-color: #ffffff; /* Solid white background */
-    color: #333; /* Dark text for contrast */
-    border-radius: 5px;
-    cursor: pointer; /* Pointer cursor on hover */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    border: none;
+    background-color: #ffffff;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
   }
   
   .login-form button:hover {
-    background-color: #f8f8f8; /* Light grey background on hover */
+    background-color: #f8f8f8;
   }
   
-  
-.title {
+  /* Typography */
+  .landing-page-title, .landing-page-subtitle {
     font-family: "Water Brush", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 100px; 
   }
   
-  .subtitle {
-    font-family: "Water Brush", cursive;
-    font-weight: 400;
-    font-style: normal;
+  .landing-page-title {
+    font-size: 100px;
+  }
+  
+  .landing-page-subtitle {
     font-size: 70px;
   }
+  
+  /* Responsive Design Adjustments */
   @media (max-width: 600px) {
-    .title {
-      font-size: 24px; /* Adjust the size based on your specific needs */
+    .landing-page-title {
+      font-size: 24px;
     }
-    .subtitle {
-      font-size: 18px; /* Smaller font size for any subtitles */
+  
+    .landing-page-subtitle {
+      font-size: 18px;
     }
-  }
-  .audio-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+  
+    .login-form {
+      width: 90%; /* Allows a bit more room on smaller screens */
+    }
   }
   
