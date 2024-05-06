@@ -9,7 +9,7 @@ const MainContent = () => {
   return (
     <div className='main-content'>
         <div className='backgroundvideo'>
-            <video autoPlay playsinline disablePictureInPicture loop muted style={{ position: 'absolute', minWidth: '100%', minHeight: '100%', top: '0', left: '0', objectFit: 'cover', zIndex:-1 }}>
+            <video autoPlay playsinline disablePictureInPicture loop muted>
                 <source src="https://www.sugokuii-events.com/worldofsugo-img/seawave.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>

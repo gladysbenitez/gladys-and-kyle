@@ -26,14 +26,14 @@ useEffect(() => {
       setVisible(true);
     }, 1000); // Delay in milliseconds
     return () => clearTimeout(timer);
-  }, []);
+  }, [muted]);
   
   return (
     <div className="landing-page-background">
-        <audio key='unmuted' autoPlay loop muted={!muted}>
+        <audio autoPlay loop muted={!muted}>
         <source src="https://www.sugokuii-events.com/media/roberta-capri.mp3" type="audio/mpeg" />
       </audio>
-        <video className='background-media' autoPlay loop muted={true}>
+        <video className='background-media' playsinline disablePictureInPicture autoPlay loop muted={true}>
         <source src="https://www.sugokuii-events.com/media/demo.mov" type="video/mp4" />
         </video> 
         <img className='background-media' src='/images/abc.jpg' alt="Background"></img>
