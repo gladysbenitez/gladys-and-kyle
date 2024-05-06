@@ -52,7 +52,7 @@ useEffect(() => {
                 onChange={handlePasswordChange}
                 placeholder="PASSWORD"
             />
-            <button onClick={handleEnter}>Enter</button>
+            <button onClick={handleEnter}>ENTER</button>
         </div>
     </div>
   </div>
