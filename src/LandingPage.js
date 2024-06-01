@@ -54,7 +54,11 @@ useEffect(() => {
             />
             <button onClick={handleEnter}>ENTER</button>
         </div>
+        {/* <div id="carAnimation">
+    <img src="/images/Piazzteta (6).png" alt="Cute Car"/>
+</div> */}
     </div>
+   
   </div>
 );
 };

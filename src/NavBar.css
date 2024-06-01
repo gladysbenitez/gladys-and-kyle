@@ -1,0 +1,85 @@
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 51, 0.8); /* Dark blue background with some transparency */
+    backdrop-filter: blur(10px); /* Blur effect for see-through background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow on the bottom */
+    z-index: 1000; /* Keeps navbar above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+  
+.nav-links {
+    flex-grow: 1; /* Allow the links container to grow */
+    display: flex;
+    justify-content: center; /* Center the nav links */
+}
+  
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Evenly space items */
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Limit the width of the links container */
+}
+  
+li {
+    padding: 10px 20px;
+}
+  
+a {
+    text-decoration: none;
+    color: white; /* Base color for the text */
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Pacifico', cursive; /* Font that feels like neon signs */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4); /* Neon effect */
+    transition: color 0.3s, text-shadow 0.3s;
+}
+  
+a:hover {
+    color: #ff00cc; /* Pink color on hover */
+    text-shadow: 0 0 5px rgba(255, 0, 204, 0.8), 0 0 10px rgba(255, 0, 204, 0.6), 0 0 15px rgba(255, 0, 204, 0.4); /* Neon effect */
+}
+  
+a.active {
+    color: red; /* Red color when active */
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.6), 0 0 15px rgba(255, 0, 0, 0.4); /* Neon effect */
+}
+  
+.wedding-crest {
+    width: 70px; /* Slightly larger size */
+    height: auto;
+    margin-left: 20px; /* Adjust to properly position the crest */
+    padding-right: 20px; /* Add padding to the right */
+}
+  
+/* Adds padding to body to prevent nav from covering page content */
+body {
+    padding-top: 60px; /* Height of nav plus some extra space */
+}
+  
+@media (max-width: 768px) {
+    .nav-links {
+        order: 2; /* Move nav links below the crest */
+        width: 100%; /* Full width for nav links */
+    }
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    li {
+        padding: 10px 0;
+    }
+    .wedding-crest {
+        order: 1; /* Move crest to the top */
+        margin: 10px auto; /* Center the crest */
+    }
+}

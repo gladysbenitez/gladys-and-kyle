@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import './MainContent.css';
+import './HomePage.css';
 
 
-const MainContent = () => {
+const HomePage = () => {
     // eslint-disable-next-line no-unused-vars
   const [muted, setMuted] = useState(true);  // Controls the audio muting
 
   return (
     <div className='main-content'>
-        <video className="main-background-media" autoPlay loop muted playsInline>
+        <video className="home-background-media" autoPlay loop muted playsInline>
           <source src="https://www.sugokuii-events.com/worldofsugo-img/seawave.mp4" type="video/mp4" />
         </video>
-        <img className='main-background-media' src='/images/Screenshot 2024-05-06 at 4.58.11 PM.png' alt="Background"></img>
+        <img className='home-background-media' src='/images/Screenshot 2024-05-06 at 4.58.11 PM.png' alt="Background"></img>
         <div className="center-container">
             <h1 className='header-text'>Coming Soon...</h1> 
             <h1 className='header-text'>- Capri, Italy -</h1>
@@ -24,4 +24,4 @@ const MainContent = () => {
   );
 };
 
-export default MainContent;
+export default HomePage;
