@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'GelatoScript';
+    src: url('./fonts/fontspring-demo-gelato_script-webfont.woff2') format('woff2'),
+         url('./fonts/fontspring-demo-gelato_script-webfont.woff') format('woff'),
+         url('./fonts/Fontspring-DEMO-Gelato_Script.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}

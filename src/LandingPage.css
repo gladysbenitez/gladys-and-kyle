@@ -2,11 +2,13 @@
 #preload-image {
     display: none;
     background-image: url('../public/images/Piazzteta (3).png');
-}
-body, html {
+  }
+  
+  body, html {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevents horizontal scrolling */
+    font-family: "Oswald", sans-serif; /* Use a consistent font throughout */
   }
   
   /* Utility Classes */
@@ -24,7 +26,7 @@ body, html {
     overflow: hidden;
     z-index: 1;
   }
-
+  
   .landing-page-background::before {
     content: "";
     position: absolute;
@@ -34,8 +36,9 @@ body, html {
     height: 100%;
     background: rgba(0, 0, 0, 0.2); /* Dark gray overlay, adjust opacity as needed */
     z-index: 2; /* Ensures the overlay is above the background but below other content */
-}
-  .background-media{
+  }
+  
+  .background-media {
     position: absolute;
     top: 0;
     left: 0;
@@ -44,6 +47,7 @@ body, html {
     object-fit: cover;
     z-index: -1;
   }
+  
   @media (max-width: 600px) {
     video.background-media {
       display: none; /* Hide video on small screens */
@@ -64,12 +68,8 @@ body, html {
       display: none; /* Hide image on larger screens */
     }
   }
-  .login-container {
-    position: absolute;
-    top: 65%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    z-index: 10;
+  
+  .content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,17 +77,28 @@ body, html {
     text-align: center;
     color: white;
     width: 100%;
+    position: absolute;
+    top: 50%; /* Adjusted to ensure proper spacing */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px; /* Ensure some padding around the container */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    z-index: 3; /* Ensure the container is above the background */
+
   }
   
-  /* Form Elements */
+  .text-container {
+    margin-top: 20px; /* Ensure proper spacing */
+  }
+  
   .login-form {
-    margin-top:-20px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    width: 40%; /* Better control over form width */
+    width: 100%; /* Full width for better responsiveness */
     max-width: 300px; /* Limits form size for better appearance on all devices */
   }
   
@@ -95,8 +106,11 @@ body, html {
     padding: 12px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    
+    font-family: "Oswald", sans-serif;
+    z-index: 4; /* Ensure the input and button are above other elements */
+
   }
+  
   @media (max-width: 600px) {
     .login-form {
       width: 80%; /* Slightly more width for small devices */
@@ -106,17 +120,17 @@ body, html {
       font-size: 14px; /* Slightly smaller font size for small devices */
     }
   }
-
-/* Additional styles for text and buttons */
+  
+  /* Additional styles for text and buttons */
   .login-form input {
-    font-family: "Oswald", sans-serif;
     font-size: 16px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     background-color: rgba(255, 255, 255, 0.3);
     color: white;
     font-weight: semi-bold;
     outline: none;
-    width: 170px;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
   }
   
   .login-form input::placeholder {
@@ -131,7 +145,6 @@ body, html {
   }
   
   .login-form button {
-    font-family: "Oswald", sans-serif;
     font-size: 18px;
     font-weight: bold;
     border: none;
@@ -139,33 +152,31 @@ body, html {
     color: #35434d;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 200px;
-    font-family: "Oswald", sans-serif;
-
-
+    width: 100%;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
   }
   
   .login-form button:hover {
     background-color: #b3b7d5;
-    color:#ffff
+    color: #fff;
   }
   
   /* Typography */
   .landing-page-title, .landing-page-subtitle {
-    font-family: "Oswald", sans-serif;
     font-weight: 600;
     font-style: normal;
+    margin: 0; /* Reset margins */
   }
   
   .landing-page-title {
-    font-size: 70px;
-    margin-bottom: -40px;
+    font-size: 50px;
+    margin-bottom: 10px; /* Added margin for spacing */
     opacity: 0; /* Start from invisible */
     animation: slideInLeft 2s ease-out forwards;
     animation-duration: 3s; /* Duration of the animation */
-    animation-fill-mode: forwards; 
-
+    animation-fill-mode: forwards;
   }
+  
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -174,6 +185,7 @@ body, html {
       opacity: 1;
     }
   }
+  
   @keyframes slideInLeft {
     from {
       transform: translateX(-500%); /* Start from the left outside of the screen */
@@ -184,6 +196,7 @@ body, html {
       opacity: 1;
     }
   }
+  
   @keyframes slideInRight {
     from {
       transform: translateX(900%); /* Start from the left outside of the screen */
@@ -194,90 +207,81 @@ body, html {
       opacity: 1;
     }
   }
-
+  
   .landing-page-subtitle {
-    font-size: 65px; 
-    /* padding-top:-100PX; */
+    font-size: 50px;
+    margin-top: -10px; /* Move the subtitle up */
+    padding-bottom: 20px; /* Add padding below the subtitle */
     opacity: 0; /* Start from invisible */
     animation: slideInRight 2s ease-out forwards;
-  animation-duration: 3s; /* Duration of the animation */
-  animation-fill-mode: forwards; 
+    animation-duration: 3s; /* Duration of the animation */
+    animation-fill-mode: forwards;
   }
   
   /* Responsive Design Adjustments */
   @media (max-width: 600px) {
     .landing-page-title {
-      font-size: 25px;
+      font-size: 35px;
     }
   
     .landing-page-subtitle {
-      font-size: 40px;
+      font-size: 35px;
+      margin-top: 0; /* Reset margin for smaller screens */
+      padding-bottom: 10px; /* Adjust padding for smaller screens */
     }
   
     .login-form {
       width: 90%; /* Allows a bit more room on smaller screens */
     }
   }
+  
   .top-image {
-    position: absolute;
-    top: 0;
-    left: 50%; /* Center the image horizontally */
-    transform: translateX(-50%); /* Shift it back by half of its width to truly center it */
-    max-width: 30%; /* Limit width to 30% of the parent container */
+    max-width: 300px; /* Adjusted width for larger screens */
     height: auto;
     z-index: 5;
     animation-name: fadeIn; /* Reference to the keyframes animation */
     animation-duration: 6s; /* Duration of the animation */
-    animation-fill-mode: forwards; 
+    animation-fill-mode: forwards;
   }
-
+  
   @media (max-width: 600px) {
     .top-image {
-        position: absolute;
-        opacity: 0; /* Start from invisible */
-        animation-name: fadeIn; /* Reference to the keyframes animation */
-        animation-duration: 6s; /* Duration of the animation */
-        animation-fill-mode: forwards;
-        top: 30%; /* Adjust the vertical position to move the image up */
-        left: 50%; /* Center it horizontally */
-        transform: translate(-50%, 0); /* Correctly center the image horizontally */
-        max-width: 50%; /* Maintain a smaller size suitable for smaller screens */
-        width: auto; /* Maintain aspect ratio */
-        height: auto; /* Maintain aspect ratio */
-        z-index: 5; /* Ensure it stays on top of the background but below interactive elements */
+      max-width: 50%; /* Adjusted width for smaller screens */
     }
-}
-#carAnimation img {
-    width:50%;
+  }
+  
+  #carAnimation img {
+    width: 50%;
     display: block; /* Ensure the image is not set to display:none */
     opacity: 1; /* Make sure it's fully visible */
-}
- 
-#carAnimation img {
+  }
+  
+  #carAnimation img {
     position: fixed;
     right: 10px; /* Start slightly to the right but not completely off-screen */
     bottom: 10px; /* Start slightly up from the very bottom to be visible */
     z-index: 100; /* Ensure it's above other elements */
     animation: driveCar 5s ease-in-out forwards; /* Adjust timing as needed */
-}
-
-@keyframes driveCar {
+  }
+  
+  @keyframes driveCar {
     0% {
-        transform: translate(0%, 0%); /* Start from the initial position */
+      transform: translate(0%, 0%); /* Start from the initial position */
     }
     20% {
-        transform: translate(-10%, -10px); /* First wobble movement */
+      transform: translate(-10%, -10px); /* First wobble movement */
     }
     40% {
-        transform: translate(-25%, -80px); /* Move further */
+      transform: translate(-25%, -80px); /* Move further */
     }
     60% {
-        transform: translate(-35%, -15px); /* Reverse direction slightly */
+      transform: translate(-35%, -15px); /* Reverse direction slightly */
     }
     80% {
-        transform: translate(-20%, -25px); /* Move almost to the final position */
+      transform: translate(-20%, -25px); /* Move almost to the final position */
     }
     100% {
-        transform: translate(8%, 250px); /* Settle at the final position */
+      transform: translate(8%, 250px); /* Settle at the final position */
     }
-}
+  }
+  
