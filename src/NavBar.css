@@ -1,129 +1,154 @@
+/* Font Imports */
 @font-face {
-    font-family: 'GelatoScript';
-    src: url('./fonts/fontspring-demo-gelato_script-webfont.woff2') format('woff2'),
-         url('./fonts/fontspring-demo-gelato_script-webfont.woff') format('woff'),
-         url('./fonts/Fontspring-DEMO-Gelato_Script.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'GelatoScript';
+  src: url('./fonts/fontspring-demo-gelato_script-webfont.woff2') format('woff2'),
+       url('./fonts/fontspring-demo-gelato_script-webfont.woff') format('woff'),
+       url('./fonts/Fontspring-DEMO-Gelato_Script.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-    font-family: 'LuminaireScript';
-    src: url('./fonts/luminaire-webfont.woff2') format('woff2'),
-         url('./fonts/luminaire-webfont.woff') format('woff'),
-         url('./fonts/Luminaire.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'LuminaireScript';
+  src: url('./fonts/luminaire-webfont.woff2') format('woff2'),
+       url('./fonts/luminaire-webfont.woff') format('woff'),
+       url('./fonts/Luminaire.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+/* Navbar Styles */
 nav {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background: rgba(0, 0, 51, 1); /* Dark blue background with some transparency */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow on the bottom */
-    z-index: 1000; /* Keeps navbar above other content */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px; /* Adjust padding as needed */
-    flex-wrap: wrap; /* Allow wrapping for responsiveness */
-  }
-  
-  /* Adds padding to body to prevent nav from covering page content */
-  body.authenticated {
-    padding-top: 60px; /* Height of nav plus some extra space */
-  }
-  
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 51, 1); /* Solid dark blue background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow on the bottom */
+  z-index: 1000; /* Keeps navbar above other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+body.authenticated {
+  padding-top: 60px; /* Height of nav plus some extra space */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center; /* Center the nav links */
+  flex-grow: 1; /* Allow the links container to grow */
+  transition: max-height 0.3s ease-in-out; /* Transition for mobile menu */
+}
+
+.nav-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 900px; /* Limit the width of the links container */
+}
+
+.nav-links li {
+  padding: 10px 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white; /* Base color for the text */
+  font-size: 28px;
+  font-family: 'LuminaireScript';
+  font-style: normal;
+  letter-spacing: 3px; /* Increase the letter spacing */
+  text-shadow: 
+      0 0 5px #fff, /* White glow */
+      0 0 10px #fff, /* White glow */
+      0 0 15px #fff, /* White glow */
+      0 0 20px #9ba4b6, /* Neon glow */
+      0 0 30px #9ba4b6, /* Neon glow */
+      0 0 40px #9ba4b6, /* Neon glow */
+      -1px -1px 0 #000,  /* Black outline */
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000; /* Outline color and size */
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-links a:hover {
+  color: #8e99b5; /* Pink color on hover */
+  text-shadow: 0 0 5px rgba(133, 157, 186, 0.8), 
+               0 0 10px rgba(255, 0, 204, 0.6), 
+               0 0 15px rgba(198, 212, 80, 0.4); /* Neon effect */
+}
+
+.nav-links a.active {
+  color: rgb(206, 149, 148); /* Red color when active */
+  text-shadow: 
+      0 0 5px rgba(207, 22, 20, 9), 
+      0 0 10px rgba(207, 22, 20, 0.6), 
+      0 0 15px rgba(207, 22, 20, 0.4), /* Neon effect */
+      0 0 5px rgba(137, 74, 118, 9), 
+      0 0 10px rgba(137, 74, 118, 0.6), 
+      0 0 15px rgba(148, 110, 150, 0.4), /* Neon effect */
+      -1px -1px 0 #000,  /* Black outline */
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000; /* Outline color and size */
+}
+
+.wedding-crest {
+  width: 70px; /* Slightly larger size */
+  height: auto;
+  cursor: pointer; /* Indicates it's clickable */
+}
+
+/* Mobile-specific Styles */
+@media (max-width: 768px) {
   .nav-links {
-    flex-grow: 1; /* Allow the links container to grow */
-    display: flex;
-    justify-content: center; /* Center the nav links */ 
+      flex-direction: column;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 51, 0.95);
+      max-height: 0;
+      overflow: hidden;
   }
-  
-  ul {
-    list-style-type: none;
-    margin-left:20px;
-    margin-right:20px;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Evenly space items */
-    align-items: center;
-    width: 100%;
-    max-width: 900px; /* Limit the width of the links container */
-  }
-  
-  li {
-    padding: 10px 30px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: white; /* Base color for the text */
-    /* font-weight: bold; */
-    font-size: 28px;
-    font-family: 'LuminaireScript';
-    font-style: normal;   
-    letter-spacing: 3px; /* Increase the letter spacing */
-    text-shadow: 
-    0 0 5px #fff, /* White glow */
-    0 0 10px #fff, /* White glow */
-    0 0 15px #fff, /* White glow */
-    0 0 20px #9ba4b6, /* Neon pink glow */
-    0 0 30px #9ba4b6, /* Neon pink glow */
-    0 0 40px #9ba4b6, /* Neon pink glow */
-    -1px -1px 0 #000,  /* Black outline */
-    1px -1px 0 #000,
-    -1px  1px 0 #000,
-    1px  1px 0 #000; /* Outline color and size */
 
-    /* text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4); Neon effect */
-    transition: color 0.3s, text-shadow 0.3s;
+  .nav-links.open {
+      max-height: 300px; /* Adjust height based on the number of items */
   }
-  
-  a:hover {
-    color: #8e99b5; /* Pink color on hover */
-    text-shadow: 0 0 5px rgba(133, 157, 186, 0.8), 0 0 10px rgba(255, 0, 204, 0.6), 0 0 15px rgba(198, 212, 80, 0.4); /* Neon effect */
-  }
-  
-  a.active {
-    color: rgb(206, 149, 148); /* Red color when active */
-    text-shadow: 
-     0 0 5px rgba(207, 22, 20, 9), 
-    0 0 10px rgba(207, 22, 20, 0.6), 
-    0 0 15px rgba(207, 22, 20, 0.4), /* Neon effect */
 
-    0 0 5px rgba(137, 74, 118, 9), 
-    0 0 10px rgba(137, 74, 118, 0.6), 
-    0 0 15px rgba(148, 110, 150, 0.4), /* Neon effect */
-   
-
-    -1px -1px 0 #000,  /* Black outline */
-    1px -1px 0 #000,
-    -1px  1px 0 #000,
-    1px  1px 0 #000; /* Outline color and size */
-  }
-  
-  .wedding-crest {
-    width: 70px; /* Slightly larger size */
-    height: auto;
-    margin-left: 0px; /* Adjust to properly position the crest */
-    padding-right: 0px; /* Add padding to the right */
-  }
-  
-  @media (max-width: 768px) {
-    .nav-links {
-      order: 2; /* Move nav links below the crest */
-      width: 100%; /* Full width for nav links */
-    }
-    ul {
+  .nav-links ul {
       flex-direction: column;
       align-items: center;
-    }
-    li {
-      padding: 10px 0;
-    }
-    .wedding-crest {
-      order: 1; /* Move crest to the top */
-      margin: 10px auto; /* Center the crest */
-    }
+      padding: 20px 0;
   }
-  
+
+  .nav-links li {
+      padding: 15px 0;
+  }
+
+  .wedding-crest {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+  }
+}
+
+/* Tablet & Larger Screens */
+@media (min-width: 769px) {
+  .nav-links {
+      flex-direction: row;
+  }
+
+  .wedding-crest {
+      margin-left: 0px;
+      padding-right: 0px;
+  }
+}
