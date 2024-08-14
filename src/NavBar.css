@@ -70,23 +70,24 @@ nav {
 .nav-links a {
   text-decoration: none;
   color: white; /* Base color for the text */
-  font-size: 28px;
-  font-family: 'LuminaireScript';
+  font-size: 29px;
+  font-family: 'GelatoScript';
   font-style: normal;
   letter-spacing: 3px; /* Increase the letter spacing */
   text-shadow: 
-      0 0 5px #fff, /* White glow */
-      0 0 10px #fff, /* White glow */
-      0 0 15px #fff, /* White glow */
-      0 0 20px #9ba4b6, /* Neon glow */
-      0 0 30px #9ba4b6, /* Neon glow */
-      0 0 40px #9ba4b6, /* Neon glow */
+      0 0 2px rgba(255, 255, 255, 0.7), /* Subtle white glow with reduced opacity */
+      0 0 4px rgba(255, 255, 255, 0.5), /* Subtle white glow with reduced opacity */
+      0 0 6px rgba(255, 255, 255, 0.4), /* Subtle white glow with reduced opacity */
+      0 0 8px rgba(155, 164, 182, 0.4), /* Subtle neon glow with reduced opacity */
+      0 0 10px rgba(155, 164, 182, 0.3), /* Subtle neon glow with reduced opacity */
+      0 0 12px rgba(155, 164, 182, 0.2), /* Subtle neon glow with reduced opacity */
       -1px -1px 0 #000,  /* Black outline */
       1px -1px 0 #000,
       -1px 1px 0 #000,
       1px 1px 0 #000; /* Outline color and size */
   transition: color 0.3s, text-shadow 0.3s;
 }
+
 
 .nav-links a:hover {
   color: #8e99b5; /* Pink color on hover */
@@ -109,6 +110,8 @@ nav {
       -1px 1px 0 #000,
       1px 1px 0 #000; /* Outline color and size */
 }
+
+
 
 /* Hamburger Icon */
 .hamburger-icon {
