@@ -1,56 +1,121 @@
-.home-content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  .home-background-media {
-    position: absolute;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    z-index: -1 !important;
+/* General Styles */
+@font-face {
+  font-family: 'GelatoScript';
+  src: url('./fonts/fontspring-demo-gelato_script-webfont.woff2') format('woff2'),
+       url('./fonts/fontspring-demo-gelato_script-webfont.woff') format('woff'),
+       url('./fonts/Fontspring-DEMO-Gelato_Script.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+.main-content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home-background-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.center-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: white;
+  text-align: center;
+}
+
+.header-text {
+  font-family: 'GelatoScript';
+  font-size: 4vw;
+  margin: 10px 0;
+}
+
+/* Responsive Design Adjustments */
 @media (max-width: 600px) {
-    video.home-background-media {
-        display: none; /* Hide video on smaller screens */
-        z-index: -1 !important;
-    }
-    img.home-background-media {
-        display: block;  /* Show image on smaller screens */
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1 !important;
+  .home-background-media {
+    object-fit: cover;
+    height: 100%;
+  }
 
-    }
+  .header-text {
+    font-size: 8vw;
+  }
 }
 
-@media (min-width: 601px) {
-    video.home-background-media {
-        display: block; /* Ensure the video is displayed on larger screens */
-    }
-    img.home-background-media {
-        display: none; /* Hide image on larger screens */
-    }
-}
-  .center-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10 !important;
-    color: white;
-    text-align: center;
+@media (min-width: 601px) and (max-width: 1024px) {
+  .home-background-media {
+    object-fit: cover;
+    height: 100%;
   }
-  .header-text{
-    font-family: "Oswald", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
 
-  
+  .header-text {
+    font-size: 6vw;
+  }
+}
+
+@media (min-width: 1025px) {
+  .home-background-media {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .header-text {
+    font-size: 3vw;
+  }
+}
+
+/* Hotel Section Styling */
+.hotels-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.hotels-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.nav-image {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.section-header {
+  margin: 50px 0 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Content Sections */
+#luxury-escapes, #charming-retreats, #cozy-comforts {
+  margin: 20px 0;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+#luxury-escapes img, #charming-retreats img, #cozy-comforts img {
+  max-width: 100%;
+  height: auto;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: 'GelatoScript';
+}
+
+p {
+  font-size: 16px;
+}
