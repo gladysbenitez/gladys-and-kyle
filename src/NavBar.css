@@ -41,9 +41,6 @@ nav {
 
 /* Hamburger Menu Icon */
 .hamburger-icon {
-  width: 30px;
-  height: auto;
-  cursor: pointer;
   display: none;
   z-index: 1100; /* Above the menu */
 }
@@ -142,23 +139,15 @@ nav {
   }
 
   .nav-links.open {
-      transform: translateX(0);
+      transform: translateX(0); /* Slide-in effect */
   }
 
-  .nav-links ul {
+  ul {
       flex-direction: column;
-      align-items: start;
-      padding: 0;
+      width: 100%;
   }
 
-  .nav-links li {
-      padding: 15px 0;
-  }
-}
-
-/* Tablet & Larger Screens */
-@media (min-width: 769px) {
-  .nav-links {
-      flex-direction: row;
+  li {
+      padding: 10px 0;
   }
 }

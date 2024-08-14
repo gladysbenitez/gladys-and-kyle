@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import MenuIcon from '@mui/icons-material/Menu';
 import './NavBar.css';
 import './fonts.css';
 
@@ -27,11 +28,10 @@ const NavBar = () => {
   return (
     <nav>
       <div className="nav-container">
-        <img
-          src="/images/hamburger-icon.png" // Make sure to add a white hamburger icon in your images folder
-          alt="Menu"
+        <MenuIcon
           className={`hamburger-icon ${isMobile ? 'visible' : 'hidden'}`}
           onClick={toggleMenu}
+          style={{ color: 'white', fontSize: '30px', cursor: 'pointer' }} // Custom styling for the icon
         />
         <div className={`nav-links ${isMenuOpen && isMobile ? 'open' : ''}`}>
           <ul>
