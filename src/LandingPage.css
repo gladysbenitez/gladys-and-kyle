@@ -1,287 +1,320 @@
 /* Base Styles */
 #preload-image {
-    display: none;
-    background-image: url('../public/images/Piazzteta (3).png');
+  display: none;
+  background-image: url('../public/images/Piazzteta (3).png');
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  font-family: "Oswald", sans-serif; /* Use a consistent font throughout */
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+/* Layout Containers */
+.landing-page-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('../public/images/abc.jpg') no-repeat center center;
+  background-size: cover; /* This ensures the background covers the entire area */
+  overflow: hidden;
+  z-index: 1;
+}
+
+.landing-page-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Dark gray overlay, adjust opacity as needed */
+  z-index: 2; /* Ensures the overlay is above the background but below other content */
+}
+
+.background-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+@media (max-width: 600px) {
+  video.background-media {
+    display: none; /* Hide video on small screens */
   }
-  
-  body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-    font-family: "Oswald", sans-serif; /* Use a consistent font throughout */
-  }
-  
-  /* Utility Classes */
-  .text-center {
-    text-align: center;
-  }
-  
-  /* Layout Containers */
-  .landing-page-background {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url('../public/images/abc.jpg') no-repeat center center;
-    background-size: cover; /* This ensures the background covers the entire area */
-    overflow: hidden;
-    z-index: 1;
-  }
-  
-  .landing-page-background::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* Dark gray overlay, adjust opacity as needed */
-    z-index: 2; /* Ensures the overlay is above the background but below other content */
-  }
-  
-  .background-media {
-    position: absolute;
-    top: 0;
-    left: 0;
+  img.background-media {
+    display: block; /* Show image on small screens */
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
   }
-  
-  @media (max-width: 600px) {
-    video.background-media {
-      display: none; /* Hide video on small screens */
-    }
-    img.background-media {
-      display: block; /* Show image on small screens */
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  
-  @media (min-width: 601px) {
-    video.background-media {
-      display: block; /* Show video on larger screens */
-    }
-    img.background-media {
-      display: none; /* Hide image on larger screens */
-    }
-  }
-  
-  .content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    width: 100%;
-    position: absolute;
-    top: 50%; /* Adjusted to ensure proper spacing */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px; /* Ensure some padding around the container */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-    z-index: 3; /* Ensure the container is above the background */
+}
 
+@media (min-width: 601px) {
+  video.background-media {
+    display: block; /* Show video on larger screens */
   }
-  
-  .text-container {
-    margin-top: 20px; /* Ensure proper spacing */
+  img.background-media {
+    display: none; /* Hide image on larger screens */
   }
-  
-  .login-form {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%; /* Full width for better responsiveness */
-    max-width: 300px; /* Limits form size for better appearance on all devices */
-  }
-  
-  .login-form input, .login-form button {
-    padding: 12px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-family: "Oswald", sans-serif;
-    z-index: 4; /* Ensure the input and button are above other elements */
+}
 
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px; /* Ensure some padding around the container */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+  z-index: 3; /* Ensure the container is above the background */
+}
+
+.text-container {
+  margin-top: 20px; /* Ensure proper spacing */
+}
+
+.login-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%; /* Full width for better responsiveness */
+  max-width: 300px; /* Limits form size for better appearance on all devices */
+}
+
+.login-form input, .login-form button {
+  padding: 12px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-family: "Oswald", sans-serif;
+  z-index: 4; /* Ensure the input and button are above other elements */
+  width: 100%;
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.login-form input {
+  font-size: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  font-weight: semi-bold;
+  outline: none;
+  text-align: center; /* Center-align the password text */
+}
+
+.login-form input::placeholder {
+  color: white;
+  opacity: 1;
+  font-weight: bold;
+}
+
+.login-form input:focus {
+  border-color: #fff;
+}
+
+.login-form button {
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  background-color: #ffffff;
+  color: #35434d;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #b3b7d5;
+  color: #fff;
+}
+
+/* Typography */
+.landing-page-title, .landing-page-subtitle {
+  font-weight: 600;
+  font-style: normal;
+  margin: 0; /* Reset margins */
+}
+
+.landing-page-title {
+  font-size: 50px;
+  margin-bottom: 10px; /* Added margin for spacing */
+  opacity: 0; /* Start from invisible */
+  animation: slideInLeft 2s ease-out forwards;
+  animation-duration: 3s; /* Duration of the animation */
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  @media (max-width: 600px) {
-    .login-form {
-      width: 80%; /* Slightly more width for small devices */
-    }
-  
-    .login-form input, .login-form button {
-      font-size: 14px; /* Slightly smaller font size for small devices */
-    }
-  }
-  
-  /* Additional styles for text and buttons */
-  .login-form input {
-    font-size: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.3);
-    color: white;
-    font-weight: semi-bold;
-    outline: none;
-    width: 100%;
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-  }
-  
-  .login-form input::placeholder {
-    color: white;
+  to {
     opacity: 1;
-    font-weight: bold;
-    text-align: center;
   }
-  
-  .login-form input:focus {
-    border-color: #fff;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-500%); /* Start from the left outside of the screen */
+    opacity: 0;
   }
-  
-  .login-form button {
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    background-color: #ffffff;
-    color: #35434d;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+  to {
+    transform: translateX(0%); /* End at the center of the screen */
+    opacity: 1;
   }
-  
-  .login-form button:hover {
-    background-color: #b3b7d5;
-    color: #fff;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(900%); /* Start from the left outside of the screen */
+    opacity: 0;
   }
-  
-  /* Typography */
-  .landing-page-title, .landing-page-subtitle {
-    font-weight: 600;
-    font-style: normal;
-    margin: 0; /* Reset margins */
+  to {
+    transform: translateX(0%); /* End at the center of the screen */
+    opacity: 1;
   }
-  
+}
+
+.landing-page-subtitle {
+  font-size: 50px;
+  margin-top: -10px; /* Move the subtitle up */
+  padding-bottom: 20px; /* Add padding below the subtitle */
+  opacity: 0; /* Start from invisible */
+  animation: slideInRight 2s ease-out forwards;
+  animation-duration: 3s; /* Duration of the animation */
+  animation-fill-mode: forwards;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 600px) {
   .landing-page-title {
-    font-size: 50px;
-    margin-bottom: 10px; /* Added margin for spacing */
-    opacity: 0; /* Start from invisible */
-    animation: slideInLeft 2s ease-out forwards;
-    animation-duration: 3s; /* Duration of the animation */
-    animation-fill-mode: forwards;
+    font-size: 35px;
   }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideInLeft {
-    from {
-      transform: translateX(-500%); /* Start from the left outside of the screen */
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0%); /* End at the center of the screen */
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideInRight {
-    from {
-      transform: translateX(900%); /* Start from the left outside of the screen */
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0%); /* End at the center of the screen */
-      opacity: 1;
-    }
-  }
-  
+
   .landing-page-subtitle {
-    font-size: 50px;
-    margin-top: -10px; /* Move the subtitle up */
-    padding-bottom: 20px; /* Add padding below the subtitle */
-    opacity: 0; /* Start from invisible */
-    animation: slideInRight 2s ease-out forwards;
-    animation-duration: 3s; /* Duration of the animation */
-    animation-fill-mode: forwards;
+    font-size: 35px;
+    margin-top: 0; /* Reset margin for smaller screens */
+    padding-bottom: 10px; /* Adjust padding for smaller screens */
   }
-  
-  /* Responsive Design Adjustments */
-  @media (max-width: 600px) {
-    .landing-page-title {
-      font-size: 35px;
-    }
-  
-    .landing-page-subtitle {
-      font-size: 35px;
-      margin-top: 0; /* Reset margin for smaller screens */
-      padding-bottom: 10px; /* Adjust padding for smaller screens */
-    }
-  
-    .login-form {
-      width: 90%; /* Allows a bit more room on smaller screens */
-    }
+
+  .login-form {
+    width: 90%; /* Allows a bit more room on smaller screens */
   }
-  
+}
+
+.top-image {
+  max-width: 300px; /* Adjusted width for larger screens */
+  height: auto;
+  z-index: 5;
+  animation-name: fadeIn; /* Reference to the keyframes animation */
+  animation-duration: 6s; /* Duration of the animation */
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 600px) {
   .top-image {
-    max-width: 300px; /* Adjusted width for larger screens */
-    height: auto;
-    z-index: 5;
-    animation-name: fadeIn; /* Reference to the keyframes animation */
-    animation-duration: 6s; /* Duration of the animation */
-    animation-fill-mode: forwards;
+    max-width: 50%; /* Adjusted width for smaller screens */
   }
-  
-  @media (max-width: 600px) {
-    .top-image {
-      max-width: 50%; /* Adjusted width for smaller screens */
-    }
+}
+
+#carAnimation img {
+  width: 50%;
+  display: block; /* Ensure the image is not set to display:none */
+  opacity: 1; /* Make sure it's fully visible */
+}
+
+#carAnimation img {
+  position: fixed;
+  right: 10px; /* Start slightly to the right but not completely off-screen */
+  bottom: 10px; /* Start slightly up from the very bottom to be visible */
+  z-index: 100; /* Ensure it's above other elements */
+  animation: driveCar 5s ease-in-out forwards; /* Adjust timing as needed */
+}
+
+@keyframes driveCar {
+  0% {
+    transform: translate(0%, 0%); /* Start from the initial position */
   }
-  
-  #carAnimation img {
-    width: 50%;
-    display: block; /* Ensure the image is not set to display:none */
-    opacity: 1; /* Make sure it's fully visible */
+  20% {
+    transform: translate(-10%, -10px); /* First wobble movement */
   }
-  
-  #carAnimation img {
-    position: fixed;
-    right: 10px; /* Start slightly to the right but not completely off-screen */
-    bottom: 10px; /* Start slightly up from the very bottom to be visible */
-    z-index: 100; /* Ensure it's above other elements */
-    animation: driveCar 5s ease-in-out forwards; /* Adjust timing as needed */
+  40% {
+    transform: translate(-25%, -80px); /* Move further */
   }
-  
-  @keyframes driveCar {
-    0% {
-      transform: translate(0%, 0%); /* Start from the initial position */
-    }
-    20% {
-      transform: translate(-10%, -10px); /* First wobble movement */
-    }
-    40% {
-      transform: translate(-25%, -80px); /* Move further */
-    }
-    60% {
-      transform: translate(-35%, -15px); /* Reverse direction slightly */
-    }
-    80% {
-      transform: translate(-20%, -25px); /* Move almost to the final position */
-    }
-    100% {
-      transform: translate(8%, 250px); /* Settle at the final position */
-    }
+  60% {
+    transform: translate(-35%, -15px); /* Reverse direction slightly */
   }
-  
+  80% {
+    transform: translate(-20%, -25px); /* Move almost to the final position */
+  }
+  100% {
+    transform: translate(8%, 250px); /* Settle at the final position */
+  }
+}
+
+/* Large Screens and TVs */
+@media (min-width: 1200px) {
+  .landing-page-title {
+    font-size: 3vw;
+  }
+
+  .landing-page-subtitle {
+    font-size: 2.5vw;
+  }
+
+  .login-form input, .login-form button {
+    font-size: 1.5em;
+  }
+}
+
+/* iPhone Screens */
+@media only screen and (max-width: 480px) {
+  .landing-page-title {
+    font-size: 8vw;
+  }
+
+  .landing-page-subtitle {
+    font-size: 6vw;
+  }
+
+  .login-form {
+    width: 90%;
+  }
+
+  .top-image {
+    max-width: 50%;
+  }
+}
+
+/* iPad Screens */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .landing-page-title {
+    font-size: 6vw;
+  }
+
+  .landing-page-subtitle {
+    font-size: 5vw;
+  }
+
+  .login-form {
+    width: 85%;
+  }
+}

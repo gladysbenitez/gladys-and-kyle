@@ -39,6 +39,7 @@ const LandingPage = ({ onEnter }) => {
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleEnter]);
+
   return (
     <div className="landing-page-background">
       <audio autoPlay loop muted={!muted}>
