@@ -53,7 +53,7 @@ const LandingPage = ({ onEnter }) => {
       </video>
       <img className='background-media' src='/images/abc.jpg' alt="Background" />
       <div className="content-container">
-        <img src="/images/Piazzteta (3).png" alt="Descriptive Alt Text" className="top-image" />
+        <img src="/images/Piazzteta (3).png" alt="Wedding Crest" className="top-image" />
         <div className="text-container">
           <h1 className={`landing-page-title ${visible ? 'visible' : ''}`}>CAPRI, ITALY</h1>
           <h1 className={`landing-page-subtitle ${visible ? 'visible' : ''}`}>2025</h1>

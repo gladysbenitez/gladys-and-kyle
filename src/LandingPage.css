@@ -318,3 +318,15 @@ body, html {
     width: 85%;
   }
 }
+
+/* Image Preloading */
+.preload-image {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  background-image: url('../public/images/Piazzteta (3).png');
+  background-size: cover;
+}
