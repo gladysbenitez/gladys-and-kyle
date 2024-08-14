@@ -25,14 +25,33 @@ const NavBar = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const handleCrestClick = () => {
+    if (isMobile) {
+      toggleMenu(); // Toggle the menu on mobile
+    } else {
+      navigate('/'); // Navigate to the home page on desktop
+    }
+  };
+
   return (
     <nav>
       <div className="nav-container">
-        <MenuIcon
-          className={`hamburger-icon ${isMobile ? 'visible' : 'hidden'}`}
-          onClick={toggleMenu}
-          style={{ color: 'white', fontSize: '30px', cursor: 'pointer' }} // Custom styling for the icon
-        />
+        {/* Display MenuIcon on mobile, wedding crest on desktop */}
+        {isMobile ? (
+          <MenuIcon
+            className="hamburger-icon"
+            onClick={toggleMenu}
+            style={{ color: 'white', fontSize: '30px', cursor: 'pointer' }}
+          />
+        ) : (
+          <img
+            src="/images/Piazzteta (3).png"
+            alt="Wedding Crest"
+            className="wedding-crest"
+            onClick={handleCrestClick}
+          />
+        )}
+
         <div className={`nav-links ${isMenuOpen && isMobile ? 'open' : ''}`}>
           <ul>
             <li><NavLink exact to="/" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Welcome</NavLink></li>

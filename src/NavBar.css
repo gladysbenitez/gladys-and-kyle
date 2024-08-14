@@ -49,10 +49,6 @@ nav {
   display: block;
 }
 
-.hamburger-icon.hidden {
-  display: none;
-}
-
 /* Navbar Links */
 .nav-links {
   display: flex;
@@ -119,10 +115,21 @@ nav {
       1px 1px 0 #000; /* Outline color and size */
 }
 
+.wedding-crest {
+  width: 70px; /* Slightly larger size */
+  height: auto;
+  margin-left: 0px; /* Adjust to properly position the crest */
+  padding-right: 0px; /* Add padding to the right */
+}
+
 /* Mobile-specific Styles */
 @media (max-width: 768px) {
   .hamburger-icon {
       display: block; /* Show hamburger icon on mobile */
+  }
+
+  .wedding-crest {
+      display: none; /* Hide the wedding crest on mobile */
   }
 
   .nav-links {
@@ -133,9 +140,11 @@ nav {
       height: 100%;
       background: rgba(0, 0, 51, 0.95);
       flex-direction: column;
-      align-items: start;
-      padding: 20px;
+      align-items: flex-start;
+      padding-top: 60px; /* Space below the navbar */
       transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out; /* Smooth transition for the slide-in menu */
+      z-index: 1100;
   }
 
   .nav-links.open {
