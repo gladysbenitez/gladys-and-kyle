@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import LandingPage from './LandingPage';
 import HomePage from './HomePage';
 import RSVPPage from './RSVPPage';
-import EngagementGalleryPage from './EngagementGalleryPage';
-import ItineraryPage from './ItineraryPage';
+import GalleryPage from './GalleryPage';
+import EventsPage from './EventsPage';
+import TravelPage from './TravelPage';
+import HotelsPage from './HotelsPage';
+import RegistryPage from './Registry';
+import ExplorePage from './Explore';
 import NavBar from './NavBar'; // Your NavBar component
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './fonts.css'
@@ -27,9 +31,13 @@ const App = () => {
             <NavBar />
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/events" element={<EventsPage />} />
+              <Route path="/travel" element={<TravelPage />} />
+              <Route path="/hotels" element={<HotelsPage />} />
+              <Route path="/explore" element={<ExplorePage />} />
               <Route path="/rsvp" element={<RSVPPage />} />
-              <Route path="/engagement-gallery" element={<EngagementGalleryPage />} />
-              <Route path="/itinerary" element={<ItineraryPage />} />
+              <Route path="/registry" element={<RegistryPage />} />
+              <Route path="/gallery" element={<GalleryPage />} />
             </Routes>
           </>
         )}

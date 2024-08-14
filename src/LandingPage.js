@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState, useCallback } from 'react';
 import './LandingPage.css';
 
@@ -11,7 +12,7 @@ const LandingPage = ({ onEnter }) => {
   };
 
   const handleEnter = useCallback(() => {
-    if (password === 'thatsamore') {
+    if (password === 'g') {
       onEnter();
     } else {
       alert('Incorrect password!');

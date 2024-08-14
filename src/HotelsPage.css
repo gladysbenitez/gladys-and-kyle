@@ -1,0 +1,52 @@
+/* General Styles */
+@font-face {
+    font-family: 'GelatoScript';
+    src: url('./fonts/fontspring-demo-gelato_script-webfont.woff2') format('woff2'),
+         url('./fonts/fontspring-demo-gelato_script-webfont.woff') format('woff'),
+         url('./fonts/Fontspring-DEMO-Gelato_Script.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+.hotels-section {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hotels-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .nav-image {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .section-header {
+    margin: 50px 0 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Content Sections */
+  #luxury-escapes, #charming-retreats, #cozy-comforts {
+    margin: 20px 0;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  #luxury-escapes img, #charming-retreats img, #cozy-comforts img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'GelatoScript';
+  }
+  
+  p {
+    font-size: 16px;
+  }

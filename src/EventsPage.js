@@ -1,14 +1,14 @@
 import React from 'react';
 
 
-const ItineraryPage = () => {
+const EventsPage = () => {
     // eslint-disable-next-line no-unused-vars
 
   return (
     <div>
-   ItineraryPage
+   EventsPage
     </div>
   );
 };
 
-export default ItineraryPage;
+export default EventsPage;

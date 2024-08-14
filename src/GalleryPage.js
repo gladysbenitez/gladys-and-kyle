@@ -1,14 +1,14 @@
 import React from 'react';
 
 
-const EngagementGalleryPage = () => {
+const GalleryPage = () => {
     // eslint-disable-next-line no-unused-vars
 
   return (
     <div>
-   EngagementGalleryPage Gallery Page
+    Gallery Page
     </div>
   );
 };
 
-export default EngagementGalleryPage;
+export default GalleryPage;
