@@ -32,15 +32,36 @@ nav {
   box-sizing: border-box;
 }
 
-body.authenticated {
-  padding-top: 60px; /* Height of nav plus some extra space */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
+/* Hamburger Menu Icon */
+.hamburger-icon {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+  display: none;
+  z-index: 1100; /* Above the menu */
+}
+
+.hamburger-icon.visible {
+  display: block;
+}
+
+.hamburger-icon.hidden {
+  display: none;
+}
+
+/* Navbar Links */
 .nav-links {
   display: flex;
-  justify-content: center; /* Center the nav links */
-  flex-grow: 1; /* Allow the links container to grow */
-  transition: max-height 0.3s ease-in-out; /* Transition for mobile menu */
+  justify-content: center;
+  flex-grow: 1;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the slide-in menu */
 }
 
 .nav-links ul {
@@ -101,43 +122,37 @@ body.authenticated {
       1px 1px 0 #000; /* Outline color and size */
 }
 
-.wedding-crest {
-  width: 70px; /* Slightly larger size */
-  height: auto;
-  cursor: pointer; /* Indicates it's clickable */
-}
-
 /* Mobile-specific Styles */
 @media (max-width: 768px) {
+  .hamburger-icon {
+      display: block; /* Show hamburger icon on mobile */
+  }
+
   .nav-links {
-      flex-direction: column;
       position: fixed;
-      top: 60px;
+      top: 0;
       left: 0;
-      width: 100%;
+      width: 250px;
+      height: 100%;
       background: rgba(0, 0, 51, 0.95);
-      max-height: 0;
-      overflow: hidden;
+      flex-direction: column;
+      align-items: start;
+      padding: 20px;
+      transform: translateX(-100%);
   }
 
   .nav-links.open {
-      max-height: 300px; /* Adjust height based on the number of items */
+      transform: translateX(0);
   }
 
   .nav-links ul {
       flex-direction: column;
-      align-items: center;
-      padding: 20px 0;
+      align-items: start;
+      padding: 0;
   }
 
   .nav-links li {
       padding: 15px 0;
-  }
-
-  .wedding-crest {
-      position: absolute;
-      top: 10px;
-      right: 10px;
   }
 }
 
@@ -145,10 +160,5 @@ body.authenticated {
 @media (min-width: 769px) {
   .nav-links {
       flex-direction: row;
-  }
-
-  .wedding-crest {
-      margin-left: 0px;
-      padding-right: 0px;
   }
 }

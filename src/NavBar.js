@@ -19,14 +19,6 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleCrestClick = () => {
-    if (isMobile) {
-      toggleMenu();
-    } else {
-      navigate('/'); // Navigate to home on desktop
-    }
-  };
-
   useEffect(() => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -34,23 +26,25 @@ const NavBar = () => {
 
   return (
     <nav>
-      <img
-        src="/images/Piazzteta (3).png"
-        alt="Wedding Crest"
-        className="wedding-crest"
-        onClick={handleCrestClick}
-      />
-      <div className={`nav-links ${isMenuOpen && isMobile ? 'open' : ''}`}>
-        <ul>
-          <li><NavLink exact to="/" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Welcome</NavLink></li>
-          <li><NavLink exact to="/events" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Events</NavLink></li>
-          <li><NavLink to="/travel" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Travel</NavLink></li>
-          <li><NavLink exact to="/hotels" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Hotel</NavLink></li>
-          <li><NavLink exact to="/explore" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Explore</NavLink></li>
-          <li><NavLink to="/rsvp" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Rsvp</NavLink></li>
-          <li><NavLink to="/registry" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Registry</NavLink></li>
-          <li><NavLink to="/gallery" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Gallery</NavLink></li>
-        </ul>
+      <div className="nav-container">
+        <img
+          src="/images/hamburger-icon.png" // Make sure to add a white hamburger icon in your images folder
+          alt="Menu"
+          className={`hamburger-icon ${isMobile ? 'visible' : 'hidden'}`}
+          onClick={toggleMenu}
+        />
+        <div className={`nav-links ${isMenuOpen && isMobile ? 'open' : ''}`}>
+          <ul>
+            <li><NavLink exact to="/" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Welcome</NavLink></li>
+            <li><NavLink exact to="/events" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Events</NavLink></li>
+            <li><NavLink to="/travel" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Travel</NavLink></li>
+            <li><NavLink exact to="/hotels" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Hotel</NavLink></li>
+            <li><NavLink exact to="/explore" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Explore</NavLink></li>
+            <li><NavLink to="/rsvp" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Rsvp</NavLink></li>
+            <li><NavLink to="/registry" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Registry</NavLink></li>
+            <li><NavLink to="/gallery" activeClassName="active" onClick={() => setIsMenuOpen(false)}>Gallery</NavLink></li>
+          </ul>
+        </div>
       </div>
     </nav>
   );
