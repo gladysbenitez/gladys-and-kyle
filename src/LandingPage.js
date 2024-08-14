@@ -12,7 +12,7 @@ const LandingPage = ({ onEnter }) => {
   };
 
   const handleEnter = useCallback(() => {
-    if (password === 'k') {
+    if (password === 'g') {  // Replace 'g' with the actual password
       onEnter();
     } else {
       alert('Incorrect password!');
@@ -34,7 +34,10 @@ const LandingPage = ({ onEnter }) => {
       }
     };
 
+    // Add event listener for keydown
     document.addEventListener('keydown', handleKeyDown);
+
+    // Clean up event listener when the component unmounts
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
