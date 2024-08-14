@@ -6,12 +6,14 @@ import './fonts.css';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
   const navigate = useNavigate();
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768);
-    if (window.innerWidth > 768) {
+    const mobileView = window.innerWidth <= 1024;
+    setIsMobile(mobileView);
+    console.log("Window resized. Is mobile:", mobileView);
+    if (!mobileView) {
       setIsMenuOpen(false); // Close the menu if resizing to desktop
     }
   };
@@ -36,13 +38,16 @@ const NavBar = () => {
   return (
     <nav>
       <div className="nav-container">
-        {/* Wedding crest always on the left */}
         <img
           src="/images/Piazzteta (3).png"
           alt="Wedding Crest"
           className="wedding-crest"
           onClick={handleCrestClick}
         />
+
+        {/* Log the current state for debugging */}
+        {console.log("Is mobile:", isMobile)}
+        {console.log("Is menu open:", isMenuOpen)}
 
         {/* Display MenuIcon on mobile, otherwise show nav links */}
         {isMobile ? (
