@@ -36,21 +36,22 @@ const NavBar = () => {
   return (
     <nav>
       <div className="nav-container">
-        {/* Display MenuIcon on mobile, wedding crest on desktop */}
+        {/* Wedding crest always on the left */}
+        <img
+          src="/images/Piazzteta (3).png"
+          alt="Wedding Crest"
+          className="wedding-crest"
+          onClick={handleCrestClick}
+        />
+
+        {/* Display MenuIcon on mobile, otherwise show nav links */}
         {isMobile ? (
           <MenuIcon
             className="hamburger-icon"
             onClick={toggleMenu}
             style={{ color: 'white', fontSize: '30px', cursor: 'pointer' }}
           />
-        ) : (
-          <img
-            src="/images/Piazzteta (3).png"
-            alt="Wedding Crest"
-            className="wedding-crest"
-            onClick={handleCrestClick}
-          />
-        )}
+        ) : null}
 
         <div className={`nav-links ${isMenuOpen && isMobile ? 'open' : ''}`}>
           <ul>

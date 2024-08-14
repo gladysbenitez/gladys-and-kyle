@@ -25,11 +25,6 @@ nav {
   background: rgba(0, 0, 51, 1); /* Solid dark blue background */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow on the bottom */
   z-index: 1000; /* Keeps navbar above other content */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  box-sizing: border-box;
 }
 
 .nav-container {
@@ -37,24 +32,25 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: 1200px; /* Limit the maximum width of the container */
+  margin: 0 auto; /* Center the navbar container */
+  padding: 0 20px; /* Some padding on the sides */
 }
 
-/* Hamburger Menu Icon */
-.hamburger-icon {
-  display: none;
-  z-index: 1100; /* Above the menu */
+.wedding-crest {
+  width: 70px;
+  height: auto;
+  cursor: pointer; /* Makes it clear that the crest is clickable */
+  position: absolute;
+  left: 20px; /* Align crest to the far left */
 }
 
-.hamburger-icon.visible {
-  display: block;
-}
-
-/* Navbar Links */
 .nav-links {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center the nav links */
   flex-grow: 1;
   transition: transform 0.3s ease-in-out; /* Smooth transition for the slide-in menu */
+  width: 100%;
 }
 
 .nav-links ul {
@@ -62,7 +58,7 @@ nav {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center; /* Center the nav links */
   align-items: center;
   width: 100%;
   max-width: 900px; /* Limit the width of the links container */
@@ -115,11 +111,10 @@ nav {
       1px 1px 0 #000; /* Outline color and size */
 }
 
-.wedding-crest {
-  width: 70px; /* Slightly larger size */
-  height: auto;
-  margin-left: 0px; /* Adjust to properly position the crest */
-  padding-right: 0px; /* Add padding to the right */
+/* Hamburger Icon */
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
 }
 
 /* Mobile-specific Styles */
@@ -157,6 +152,6 @@ nav {
   }
 
   li {
-      padding: 10px 0;
+      padding: 10px 20px;
   }
 }

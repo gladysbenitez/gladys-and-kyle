@@ -8,8 +8,7 @@ const RSVPPage = () => {
     <div>
    rsvp page sdibjsdbvjahsvcfjhsdvFHJVDSJFVA,sdibjsdbvjahsvcfjhsdvFHJVDSJFVA
 
-   SKDJFBSKJDFBJSKDBFJKDS
-   BDSKJFBSJDKBFKJSBFKSJDBFKJSBDFKJBSDKJFBSDKJFBKSDF
+   TO RSVP CHECK BACK LATER..
     </div>
   );
 };
