@@ -12,7 +12,7 @@ const LandingPage = ({ onEnter }) => {
   };
 
   const handleEnter = useCallback(() => {
-    if (password === 'g') {
+    if (password === 'k') {
       onEnter();
     } else {
       alert('Incorrect password!');
