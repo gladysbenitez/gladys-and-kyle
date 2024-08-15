@@ -1,52 +1,143 @@
-/* General Styles */
+/* Adding the Sunday-Regular Font */
 @font-face {
-    font-family: 'GelatoScript';
-    src: url('./fonts/fontspring-demo-gelato_script-webfont.woff2') format('woff2'),
-         url('./fonts/fontspring-demo-gelato_script-webfont.woff') format('woff'),
-         url('./fonts/Fontspring-DEMO-Gelato_Script.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'SundayRegular';
+  src: url('./fonts/Sunday-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
-.hotels-section {
-    text-align: center;
-    padding: 20px;
+
+/* Base Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  /* Removed global font-family assignment */
+}
+
+/* Hotels Page Specific Styles */
+.hotels-page {
+  font-family: 'SundayRegular', sans-serif;
+  padding: 20px;
+}
+
+/* Top Section Styles */
+.hotels-intro {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.where-to-stay-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.intro-text {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.fish-selection {
+  display: flex;
+  justify-content: center;
+  gap: 190px;
+  margin-bottom: 30px;
+}
+
+.fish-image {
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.fish-image:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+/* Hotel Category Descriptions */
+.hotel-categories {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.hotel-category {
+  max-width: 300px;
+  cursor: pointer;
+}
+
+.hotel-category h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.hotel-category p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Individual Hotel Section Styles */
+.hotel-sections {
+  margin-top: 50px;
+}
+
+.hotel-section {
+  margin-bottom: 100px;
+}
+
+.hotel-section h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hotel-entry {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.hotel-entry img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.hotel-entry img:hover {
+  transform: scale(1.05);
+}
+
+.hotel-details {
+  max-width: 600px;
+}
+
+.hotel-details h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.hotel-details p {
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fish-selection {
+    flex-direction: column;
+    gap: 20px;
   }
-  
-  .hotels-nav {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+
+  .hotel-categories {
+    flex-direction: column;
+    gap: 20px;
   }
-  
-  .nav-image {
-    margin: 0 10px;
-    cursor: pointer;
+
+  .hotel-entry {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .section-header {
-    margin: 50px 0 20px;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  /* Content Sections */
-  #luxury-escapes, #charming-retreats, #cozy-comforts {
-    margin: 20px 0;
-    padding: 20px;
-    border-top: 1px solid #ddd;
-  }
-  
-  #luxury-escapes img, #charming-retreats img, #cozy-comforts img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    font-family: 'GelatoScript';
-  }
-  
-  p {
-    font-size: 16px;
-  }
+}

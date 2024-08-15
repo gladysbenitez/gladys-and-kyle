@@ -54,6 +54,7 @@ const LandingPage = ({ onEnter }) => {
       <img className='background-media' src='/images/abc.jpg' alt="Background" />
       <div className="content-container">
         <img src="/images/Piazzteta (3).png" alt="Wedding Crest" className="top-image" />
+        <img src="/images/smallercrest.png" alt="Wedding Crest Small" className="top-image-small" />
         <div className="text-container">
           <h1 className={`landing-page-title ${visible ? 'visible' : ''}`}>CAPRI, ITALY</h1>
           <h1 className={`landing-page-subtitle ${visible ? 'visible' : ''}`}>2025</h1>

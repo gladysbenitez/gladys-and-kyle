@@ -218,6 +218,20 @@ body, html {
   .login-form {
     width: 90%; /* Allows a bit more room on smaller screens */
   }
+
+  .top-image {
+    display: none;
+  }
+
+  .top-image-small {
+    display: block;
+    max-width: 50%;
+    height: auto;
+    z-index: 5;
+    animation-name: fadeIn; /* Reference to the keyframes animation */
+    animation-duration: 6s; /* Duration of the animation */
+    animation-fill-mode: forwards;
+  }
 }
 
 .top-image {
@@ -299,7 +313,7 @@ body, html {
     width: 90%;
   }
 
-  .top-image {
+  .top-image-small {
     max-width: 50%;
   }
 
