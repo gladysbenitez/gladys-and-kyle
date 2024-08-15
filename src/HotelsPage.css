@@ -17,7 +17,7 @@ body, html {
 /* Hotels Page Specific Styles */
 .hotels-page {
   padding: 10vw 10vw;
-  font-family: 'Georgia', serif; /* Apply Georgia specifically to Hotels page as fallback */
+  font-family: 'Georgia', serif; /* Apply Georgia specifically to Hotels page*/
 }
 
 .hotels-page .where-to-stay-title,
@@ -48,12 +48,12 @@ body, html {
 .fish-selection {
   display: flex;
   justify-content: center;
-  gap: 200px;
+  gap: 100px;
   margin-bottom: 30px;
 }
 
 .fish-image {
-  width: 150px;
+  width: 200px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -103,12 +103,11 @@ body, html {
 .hotel-entry {
   display: flex;
   gap: 20px;
-  margin-bottom: 20px;
 }
 
 .hotel-entry img {
-  width: 40%;
-  max-width: 300px;
+  width: 50%;
+  max-width: 400px;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
@@ -124,6 +123,7 @@ body, html {
 .hotel-details h4 {
   font-size: 22px;
   margin-bottom: 10px;
+  padding-top: 26px;
 }
 
 .hotel-details p {
@@ -145,7 +145,7 @@ body, html {
   }
 
   .fish-image {
-    width: 120px;
+    width: 160px;
   }
 
   .hotel-category h2 {
@@ -184,7 +184,7 @@ body, html {
   }
 
   .fish-image {
-    width: 100px;
+    width: 120px;
   }
 
   .hotel-category h2 {
@@ -211,21 +211,26 @@ body, html {
 @media (max-width: 480px) {
   .where-to-stay-title {
     font-size: 28px;
+    padding-bottom: 20px;
   }
 
   .intro-text {
-    font-size: 12px;
+    font-size: 12px; 
+    margin-bottom: 10px;
   }
 
   .fish-selection {
     flex-direction: row;
-    gap: 15px;
+    gap: 15px; 
+    margin-bottom: 15px;
   }
 
   .fish-image {
-    width: 80px;
+    width: 100px;
   }
-
+  .hotel-categories {
+    gap:20px;
+  }
   .hotel-category h2 {
     font-size: 16px;
   }
@@ -234,12 +239,29 @@ body, html {
     font-size: 12px;
   }
 
-  .hotel-entry img {
-    max-width: 150px;
+  .hotel-entry {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;    /* Center-align the content */
+    text-align: center;     /* Center the text */
+  }
+
+  .hotel-details {
+    order: 3;               /* Position the text at the bottom */
+    max-width: 90%;         /* Ensure the text fits well on the screen */
   }
 
   .hotel-details h4 {
-    font-size: 16px;
+    order: 1;               /* Move the hotel name to the top */
+    font-size: 16px;        /* Adjust the font size if necessary */
+    margin-bottom: 10px;    /* Add some space below the hotel name */
+  }
+
+  .hotel-entry img {
+    order: 2;               /* Position the image between the name and the description */
+    width: 100%;            /* Make the image full width */
+    max-width: 100%;        /* Ensure the image does not exceed the container width */
+    height: auto;           /* Maintain the aspect ratio */
+    margin-bottom: -35%;    /* Add some space below the image */
   }
 
   .hotel-details p {
