@@ -4,7 +4,7 @@ import './HotelsPage.css';
 function HotelsPage() {
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId).scrollIntoView({
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   };
 
@@ -13,14 +13,18 @@ function HotelsPage() {
       {/* Top Section with Fish Images */}
       <div className="hotels-intro">
         <h1 className="where-to-stay-title">WHERE TO STAY</h1>
-        <p className="intro-text">Welcome to our curated list of accommodations for your stay in Anacapri. We've selected a range of hotels to suit different preferences and budgets, ensuring a comfortable and memorable experience for all our guests.</p>
-        
+        <p className="intro-text">
+          Welcome to our curated list of accommodations for your stay in Anacapri.
+          We've selected a range of hotels to suit different preferences and budgets,
+          ensuring a comfortable and memorable experience for all our guests.
+        </p>
+
         <div className="fish-selection">
           <img src="images/fish.png" alt="Luxury Escapes" className="fish-image" onClick={() => scrollToSection('luxury-escapes')} />
           <img src="images/fish.png" alt="Charming Retreats" className="fish-image" onClick={() => scrollToSection('charming-retreats')} />
           <img src="images/flippedfish.png" alt="Cozy Comforts" className="fish-image" onClick={() => scrollToSection('cozy-comforts')} />
         </div>
-        
+
         <div className="hotel-categories">
           <div className="hotel-category" onClick={() => scrollToSection('luxury-escapes')}>
             <h2>Luxury Escapes</h2>
@@ -42,7 +46,7 @@ function HotelsPage() {
         <div className="hotel-section" id="luxury-escapes">
           <h3>Luxury Escapes</h3>
           <div className="hotel-entry">
-            <img src="images/jumeriah-capri-palace.jpg" alt="Jumeriah Capri Palace" />
+            <img src="images/Jumeriah.png" alt="Jumeriah Capri Palace" />
             <div className="hotel-details">
               <h4>Jumeriah Capri Palace</h4>
               <p>Description and details about the hotel...</p>
@@ -53,7 +57,7 @@ function HotelsPage() {
         <div className="hotel-section" id="charming-retreats">
           <h3>Charming Retreats</h3>
           <div className="hotel-entry">
-            <img src="images/casa-mariantonia.jpg" alt="Casa Mariantonia" />
+            <img src="images/CasaMariantonia.png" alt="Casa Mariantonia" />
             <div className="hotel-details">
               <h4>Casa Mariantonia</h4>
               <p>Description and details about the hotel...</p>
@@ -64,7 +68,7 @@ function HotelsPage() {
         <div className="hotel-section" id="cozy-comforts">
           <h3>Cozy Comforts</h3>
           <div className="hotel-entry">
-            <img src="images/hotel-biancamaria.jpg" alt="Hotel Biancamaria" />
+            <img src="images/CasearAug.png" alt="Hotel Biancamaria" />
             <div className="hotel-details">
               <h4>Hotel Biancamaria</h4>
               <p>Description and details about the hotel...</p>
