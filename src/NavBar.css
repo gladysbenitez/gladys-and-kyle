@@ -180,12 +180,17 @@ nav {
   .nav-links.open {
     transform: translateX(0); /* Slide-in effect */
   }
+  
+  .nav-links ul{
+    align-items: flex-start;
+  }
 
   ul {
     flex-direction: column;
     width: 100%;
     padding-left: 20px; /* Padding for the list items */
   }
+
 
   li {
     padding: 10px 20px;
