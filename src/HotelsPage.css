@@ -10,13 +10,21 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Georgia', serif;
   background-color: #fff;
   overflow-x: hidden;
 }
 
+/* Hotels Page Specific Styles */
 .hotels-page {
   padding: 10vw 10vw;
+  font-family: 'Georgia', serif; /* Apply Georgia specifically to Hotels page as fallback */
+}
+
+.hotels-page .where-to-stay-title,
+.hotels-page .hotel-category h2,
+.hotels-page .hotel-section h3,
+.hotels-page .hotel-details h4 {
+  font-family: 'SundayRegular', sans-serif; /* Apply SundayRegular to specific elements */
 }
 
 /* Top Section Styles */
@@ -26,7 +34,6 @@ body, html {
 }
 
 .where-to-stay-title {
-  font-family: 'SundayRegular', sans-serif;
   font-size: 48px;
   margin-bottom: 10px;
 }
@@ -69,7 +76,6 @@ body, html {
 }
 
 .hotel-category h2 {
-  font-family: 'SundayRegular', sans-serif;
   font-size: 24px;
   margin-bottom: 10px;
 }
@@ -89,7 +95,6 @@ body, html {
 }
 
 .hotel-section h3 {
-  font-family: 'SundayRegular', sans-serif;
   font-size: 32px;
   margin-bottom: 20px;
   text-align: center;
@@ -103,7 +108,7 @@ body, html {
 
 .hotel-entry img {
   width: 40%;
-  max-width: 300px; /* Adjusted to make images smaller */
+  max-width: 300px;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
@@ -117,7 +122,6 @@ body, html {
 }
 
 .hotel-details h4 {
-  font-family: 'SundayRegular', sans-serif;
   font-size: 22px;
   margin-bottom: 10px;
 }
@@ -129,116 +133,116 @@ body, html {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .where-to-stay-title {
-    font-size: 36px; /* Reduce font size for tablets */
+    font-size: 36px;
   }
 
   .intro-text {
-    font-size: 16px; /* Reduce font size for tablets */
+    font-size: 16px;
   }
 
   .fish-selection {
-    gap: 100px; /* Reduce gap between fish for tablets */
+    gap: 100px;
   }
 
   .fish-image {
-    width: 120px; /* Reduce fish image size for tablets */
+    width: 120px;
   }
 
   .hotel-category h2 {
-    font-size: 20px; /* Reduce heading size for tablets */
+    font-size: 20px;
   }
 
   .hotel-category p {
-    font-size: 14px; /* Reduce paragraph size for tablets */
+    font-size: 14px;
   }
 
   .hotel-entry img {
-    max-width: 250px; /* Further reduce the size for tablets */
+    max-width: 250px;
   }
 
   .hotel-details h4 {
-    font-size: 20px; /* Adjust heading size for tablets */
+    font-size: 20px;
   }
 
   .hotel-details p {
-    font-size: 14px; /* Adjust paragraph size for tablets */
+    font-size: 14px;
   }
 }
 
 @media (max-width: 768px) {
   .where-to-stay-title {
-    font-size: 32px; /* Reduce font size for mobile devices */
+    font-size: 32px;
   }
 
   .intro-text {
-    font-size: 14px; /* Further reduce font size for mobile devices */
+    font-size: 14px;
   }
 
   .fish-selection {
-    flex-direction: row; /* Use row direction for small screens */
-    gap: 20px; /* Maintain appropriate gap */
+    flex-direction: row;
+    gap: 20px;
   }
 
   .fish-image {
-    width: 100px; /* Further reduce fish image size for mobile devices */
+    width: 100px;
   }
 
   .hotel-category h2 {
-    font-size: 18px; /* Adjust heading size for mobile */
+    font-size: 18px;
   }
 
   .hotel-category p {
-    font-size: 14px; /* Adjust paragraph size for mobile */
+    font-size: 14px;
   }
 
   .hotel-entry img {
-    max-width: 200px; /* Reduce image size for mobile devices */
+    max-width: 200px;
   }
 
   .hotel-details h4 {
-    font-size: 18px; /* Adjust heading size for mobile */
+    font-size: 18px;
   }
 
   .hotel-details p {
-    font-size: 14px; /* Adjust paragraph size for mobile */
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
   .where-to-stay-title {
-    font-size: 28px; /* Further reduce font size for smaller mobile screens */
+    font-size: 28px;
   }
 
   .intro-text {
-    font-size: 12px; /* Reduce font size for smaller mobile screens */
+    font-size: 12px;
   }
 
   .fish-selection {
-    flex-direction: row; /* Ensure fish images are in a row */
-    gap: 15px; /* Reduce gap between fish images for smaller screens */
+    flex-direction: row;
+    gap: 15px;
   }
 
   .fish-image {
-    width: 80px; /* Smallest size for smaller mobile screens */
+    width: 80px;
   }
 
   .hotel-category h2 {
-    font-size: 16px; /* Further adjust heading size for smaller screens */
+    font-size: 16px;
   }
 
   .hotel-category p {
-    font-size: 12px; /* Further adjust paragraph size for smaller screens */
+    font-size: 12px;
   }
 
   .hotel-entry img {
-    max-width: 150px; /* Smallest size for smaller mobile screens */
+    max-width: 150px;
   }
 
   .hotel-details h4 {
-    font-size: 16px; /* Further adjust heading size for smaller screens */
+    font-size: 16px;
   }
 
   .hotel-details p {
-    font-size: 12px; /* Further adjust paragraph size for smaller screens */
+    font-size: 12px;
   }
 }
