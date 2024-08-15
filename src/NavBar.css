@@ -16,6 +16,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 /* Navbar Styles */
 nav {
   width: 100%;
@@ -37,11 +38,12 @@ nav {
 }
 
 .wedding-crest {
-  width: 70px;
+  width: 55px;
   height: auto;
   cursor: pointer; /* Makes it clear that the crest is clickable */
   position: absolute;
   left: 20px; /* Align crest to the far left */
+  z-index: 1101; /* Ensures it stays above other elements */
 }
 
 .nav-links {
@@ -88,7 +90,6 @@ nav {
   transition: color 0.3s, text-shadow 0.3s;
 }
 
-
 .nav-links a:hover {
   color: #8e99b5; /* Pink color on hover */
   text-shadow: 0 0 5px rgba(133, 157, 186, 0.8), 
@@ -111,8 +112,6 @@ nav {
       1px 1px 0 #000; /* Outline color and size */
 }
 
-
-
 /* Hamburger Icon */
 .hamburger-icon {
   display: none;
@@ -122,45 +121,73 @@ nav {
   right: 20px;
   top: 15px;
 }
+/* Desktop-Specific Styles */
+@media (min-width: 1025px) {
+  .hamburger-icon {
+    display: none !important; /* Hide hamburger icon on desktop */
+  }
+}
+
+/* Overlay Style */
+.overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(25, 32, 61, 0.82); /* Semi-transparent black overlay */
+  z-index: 1099; /* Just below the navbar */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlay.visible {
+  display: block; /* Show the overlay */
+  opacity: 1;
+}
 
 /* Mobile and Tablet-specific Styles */
 @media (max-width: 1024px) {
   .hamburger-icon {
-      display: block !important; /* Show hamburger icon on screens smaller than 1024px */
+    display: block !important; /* Show hamburger icon on screens smaller than 1024px */
   }
 
   .wedding-crest {
-      display: none; /* Hide the wedding crest on mobile and tablets */
+    display: block; /* Show the wedding crest */
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    z-index: 1102; /* Ensures it stays above other elements */
   }
 
   .nav-links {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 250px;
-      height: 100%;
-      background: rgba(0, 0, 51, 0.95); /* Slightly transparent dark blue */
-      flex-direction: column;
-      align-items: flex-start;
-      padding-top: 60px; /* Space below the navbar */
-      transform: translateX(-100%);
-      transition: transform 0.3s ease-in-out; /* Smooth transition for the slide-in menu */
-      z-index: 1100;
-      border-top: 2px solid rgba(255, 255, 255, 0.3); /* Subtle top border */
-      box-shadow: 0px -3px 15px rgba(0, 0, 0, 0.5); /* Shadow for the top */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: rgba(0, 0, 51, 0.95); /* Slightly transparent dark blue */
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 115px; /* Space below the navbar */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the slide-in menu */
+    z-index: 1100;
+    border-top: 2px solid rgba(255, 255, 255, 0.3); /* Subtle top border */
+    box-shadow: 0px -3px 15px rgba(0, 0, 0, 0.5); /* Shadow for the top */
   }
 
   .nav-links.open {
-      transform: translateX(0); /* Slide-in effect */
+    transform: translateX(0); /* Slide-in effect */
   }
 
   ul {
-      flex-direction: column;
-      width: 100%;
-      padding-left: 20px; /* Padding for the list items */
+    flex-direction: column;
+    width: 100%;
+    padding-left: 20px; /* Padding for the list items */
   }
 
   li {
-      padding: 10px 20px;
+    padding: 10px 20px;
   }
 }
