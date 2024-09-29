@@ -57,9 +57,6 @@ function HotelsPage() {
                 <strong>Fun Fact:</strong> Zuma, one of the couple's favorite restaurants, opened its rooftop location in Capri in 2022. We highly recommend dining here if you plan to stay an extra night or arrive early. It's a vibrant hotspot with plenty of trendy activities and an unforgettable dining experience. (reservations needed)
               </p>
               <p>
-                <strong>Price Range:</strong> $$$$
-              </p>
-              <p>
                 <strong>Booking Code:</strong> GKCAPRI2025
               </p>
               <p>
@@ -77,9 +74,6 @@ function HotelsPage() {
               </p>
               <p>
                 <strong>Things to note:</strong> While it's a short distance to the center of Anacapri, we do not recommend walking because the roads are very tight, and there are lots of traffic jams with the bigger buses.
-              </p>
-              <p>
-                <strong>Price Range:</strong> $$$$
               </p>
               <p>
                 <strong>Link to Book:</strong> Hotel Caesar Augustus
@@ -102,9 +96,6 @@ function HotelsPage() {
                 <strong>Notable:</strong> La Zagara, Casa Mariantonia's in-house restaurant and wine bar, will host some events, making this a super convenient choice for our guests. The attached wine bar offers a selection of fine wines, hors d'oeuvres, and cheese and charcuterie plates. It's perfect for enjoying a glass of wine, a quick aperitivo, or a light snack while soaking in the local ambiance.
               </p>
               <p>
-                <strong>Price Range:</strong> $$$
-              </p>
-              <p>
                 <strong>Link to Book:</strong> Casa Mariantonia
               </p>
             </div>
@@ -119,9 +110,6 @@ function HotelsPage() {
               </p>
               <p>
                 <strong>Notable:</strong> This hotel is conveniently located next to one of our favorite casual lunch spots. If you’re looking for a delicious lunch without the need for a reservation, Sciué Sciué Restaurant is the perfect place to indulge.
-              </p>
-              <p>
-                <strong>Price Range:</strong> $$$
               </p>
               <p>
                 <strong>Link to Book:</strong> Villa Blu Capri
@@ -140,9 +128,6 @@ function HotelsPage() {
                 <strong>Description:</strong> Located in the heart of Anacapri, this hotel provides easy access to local attractions and offers a cozy, comfortable stay. Perfect for those looking for great value without sacrificing quality. </p>
               <p>
                 <strong>Notable:</strong> This hotel boasts a prime location with breakfast included and is within walking distance to the rehearsal dinner and all transportation points. Additionally, it’s conveniently situated near one of our favorite casual lunch spots. Scui Scui Restaurant is the perfect place to indulge without a reservation. </p>
-              <p>
-                <strong>Price Range:</strong> $$
-              </p>
               <p>
                 <strong>Link to Book:</strong> Hotel Biancamaria
               </p>            
