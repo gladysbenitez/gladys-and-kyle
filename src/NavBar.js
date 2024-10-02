@@ -14,9 +14,9 @@ const NavBar = () => {
       case '/hotels':
         return 'black';
       case '/events':
-        return 'red';
+        return 'black';
       case '/travel':
-        return 'blue';
+        return 'white';
       default:
         return 'white'; // Default color
     }
