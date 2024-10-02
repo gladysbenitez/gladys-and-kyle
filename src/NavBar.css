@@ -169,7 +169,7 @@ nav {
     background: rgba(0, 0, 51, 0.95); /* Slightly transparent dark blue */
     flex-direction: row;
     align-items: flex-start;
-    padding-top: 115px; /* Space below the navbar */
+    padding-top: 50px; /* Space below the navbar */
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out; /* Smooth transition for the slide-in menu */
     z-index: 1100;
