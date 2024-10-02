@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import './NavBar.css';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const isAuthenticated = sessionStorage.getItem('isAuthenticated') === 'true';
+    if (!isAuthenticated) {
+      navigate('/'); // Redirect to landing page if not authenticated
+    }
+  }, [navigate]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

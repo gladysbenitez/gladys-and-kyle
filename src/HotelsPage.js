@@ -13,11 +13,11 @@ function HotelsPage() {
       {/* Top Section with Fish Images */}
       <div className="hotels-intro">
         <h1 className="where-to-stay-title">WHERE TO STAY</h1>
-        <p className="intro-text">
-          Welcome to our curated list of accommodations for your stay in Anacapri.
-          We've selected a range of hotels to suit different preferences and budgets,
-          ensuring a comfortable and memorable experience for all our guests.
-        </p>
+        {/* <p className="intro-text">
+        Welcome to our carefully curated selection of accommodations for your stay in Anacapri.
+We have handpicked a few exceptional hotels located conveniently near our events on the Anacapri side of the island, ensuring an unforgettable experience for all our guests. While these recommendations provide comfort and proximity, there are many other stunning options, including boutique villas and Airbnb stays. However, please note that some may require significant walking or a deeper familiarity with the area’s logistics.
+        </p> */}
+        <p className='intro-text'>We have handpicked a few exceptional hotels located conveniently near our events on the Anacapri side of the island, ensuring an unforgettable experience for all our guests. While these recommendations provide comfort and proximity, there are many other stunning options that are not on this list, including boutique villas and Airbnb stays. For those who share the bride’s love for adventure and discovering hidden gems, an Airbnb may offer a more off-the-beaten-path experience and beautiful privacy. However, please note that some may require significant walking and familiarity with the area to ensure timely arrivals.</p>
 
         <div className="fish-selection">
           <img src="images/fish.png" alt="Luxury Escapes" className="fish-image" onClick={() => scrollToSection('luxury-escapes')} />
@@ -55,9 +55,6 @@ function HotelsPage() {
               </p>
               <p>
                 <strong>Fun Fact:</strong> Zuma, one of the couple's favorite restaurants, opened its rooftop location in Capri in 2022. We highly recommend dining here if you plan to stay an extra night or arrive early. It's a vibrant hotspot with plenty of trendy activities and an unforgettable dining experience. (reservations needed)
-              </p>
-              <p>
-                <strong>Booking Code:</strong> GKCAPRI2025
               </p>
               <p>
                 <strong>Link to Book:</strong> Jumeriah Capri Palace

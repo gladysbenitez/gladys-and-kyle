@@ -12,7 +12,11 @@ const LandingPage = ({ onEnter }) => {
   };
 
   const handleEnter = useCallback(() => {
-    if (password === 'g') {  // Replace 'g' with the actual password
+    // Normalize the password by converting to lowercase and removing spaces
+    const normalizedPassword = password.toLowerCase().replace(/\s+/g, '');
+    const correctPassword = 'thatsamore'; // Normalize your correct password the same way
+  
+    if (normalizedPassword === correctPassword) {
       onEnter();
     } else {
       alert('Incorrect password!');

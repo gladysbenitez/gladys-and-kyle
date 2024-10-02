@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+  // eslint-disable-next-line no-unused-vars
+import React, { useState, useEffect } from 'react';
 import LandingPage from './LandingPage';
 import HomePage from './HomePage';
 import RSVPPage from './RSVPPage';
@@ -10,17 +11,19 @@ import RegistryPage from './Registry';
 import ExplorePage from './Explore';
 import NavBar from './NavBar'; // Your NavBar component
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './fonts.css'
+import './fonts.css';
 
 const App = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  // eslint-disable-next-line no-unused-vars
-  const [isComingSoon, setIsComingSoon] = useState(true);
+  // Check if user is already authenticated
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    sessionStorage.getItem('isAuthenticated') === 'true'
+  );
+
   const handleAuthentication = () => {
     setIsAuthenticated(true);
-    // setIsComingSoon(false)
+    sessionStorage.setItem('isAuthenticated', 'true'); // Persist authentication state
   };
-
+  // eslint-disable-next-line no-unused-vars
   return (
     <Router>
       <div>
