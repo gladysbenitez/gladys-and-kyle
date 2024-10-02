@@ -120,6 +120,7 @@ nav {
   position: fixed;
   right: 20px;
   top: 15px;
+  transition: color 0.3s ease; /* Smooth transition for color change */
 }
 /* Desktop-Specific Styles */
 @media (min-width: 1025px) {
@@ -180,7 +181,7 @@ nav {
   .nav-links.open {
     transform: translateX(0); /* Slide-in effect */
   }
-  
+
   .nav-links ul{
     align-items: flex-start;
   }

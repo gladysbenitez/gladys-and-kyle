@@ -37,7 +37,11 @@ const NavBar = () => {
         <MenuIcon
           className="hamburger-icon"
           onClick={toggleMenu}
-          style={{ color: 'white', fontSize: '30px', cursor: 'pointer' }}
+          style={{
+            color: isMenuOpen ? 'white' : 'black', // Change color based on menu state
+            fontSize: '30px',
+            cursor: 'pointer',
+          }}
         />
 
         {/* Overlay */}
