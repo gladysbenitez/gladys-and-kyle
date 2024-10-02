@@ -83,7 +83,7 @@ const NavBar = () => {
             <li><NavLink end to="/" className={({ isActive }) => (isActive ? 'active' : '')} onClick={closeMenu}>Welcome</NavLink></li>
             <li><NavLink end to="/events" className={({ isActive }) => (isActive ? 'active' : '')} onClick={closeMenu}>Events</NavLink></li>
             <li><NavLink end to="/travel" className={({ isActive }) => (isActive ? 'active' : '')} onClick={closeMenu}>Travel</NavLink></li>
-            <li><NavLink end to="/hotels" className={({ isActive }) => (isActive ? 'active' : '')} onClick={closeMenu}>Hotel</NavLink></li>
+            <li><NavLink end to="/hotels" className={({ isActive }) => (isActive ? 'active' : '')} onClick={closeMenu}>Hotels</NavLink></li>
             <li><NavLink end to="/explore" className={({ isActive }) => (isActive ? 'active' : '')} onClick={closeMenu}>Explore</NavLink></li>
             <li><NavLink end to="/rsvp" className={({ isActive }) => (isActive ? 'active' : '')} onClick={closeMenu}>Rsvp</NavLink></li>
             <li><NavLink end to="/registry" className={({ isActive }) => (isActive ? 'active' : '')} onClick={closeMenu}>Registry</NavLink></li>
