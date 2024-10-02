@@ -31,7 +31,6 @@ body, html {
 .hotels-intro {
   text-align: center;
   margin-bottom: 50px;
-  padding-top: 50px;
 }
 
 .where-to-stay-title {
@@ -133,6 +132,9 @@ body, html {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .hotels-intro{
+    padding-top: 40px;
+  }
   .where-to-stay-title {
     font-size: 36px;
   }
@@ -171,6 +173,9 @@ body, html {
 }
 
 @media (max-width: 768px) {
+  .hotels-intro{
+    padding-top: 40px;
+  }
   .where-to-stay-title {
     font-size: 32px;
   }
@@ -210,6 +215,9 @@ body, html {
 }
 
 @media (max-width: 480px) {
+  .hotels-intro{
+    padding-top: 40px;
+  }
   .where-to-stay-title {
     font-size: 28px;
     padding-bottom: 20px;
