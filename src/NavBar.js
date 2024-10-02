@@ -14,10 +14,9 @@ const NavBar = () => {
       case '/hotels':
         return 'black';
       case '/events':
-        return 'white';
+        return 'red';
       case '/travel':
         return 'blue';
-      // Add more cases as needed for other paths
       default:
         return 'white'; // Default color
     }
@@ -41,13 +40,15 @@ const NavBar = () => {
   return (
     <nav>
       <div className="nav-container">
-        {/* Wedding Crest */}
-        <img
-          src="/images/Piazzteta (3).png"
-          alt="Wedding Crest"
-          className="wedding-crest"
-          onClick={closeMenu}
-        />
+        {/* Hide Crest when menu is open in mobile/tablet */}
+        {!isMenuOpen && (
+          <img
+            src="/images/Piazzteta (3).png"
+            alt="Wedding Crest"
+            className="wedding-crest"
+            onClick={closeMenu}
+          />
+        )}
 
         {/* Hamburger Icon */}
         <MenuIcon
@@ -69,6 +70,16 @@ const NavBar = () => {
         {/* Navigation Links */}
         <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
           <ul>
+            {/* Show Crest inside menu when it is open */}
+            {isMenuOpen && (
+              <li className="nav-crest">
+                <img
+                  src="/images/Piazzteta (3).png"
+                  alt="Wedding Crest"
+                  className="menu-crest"
+                />
+              </li>
+            )}
             <li><NavLink end to="/" className={({ isActive }) => (isActive ? 'active' : '')} onClick={closeMenu}>Welcome</NavLink></li>
             <li><NavLink end to="/events" className={({ isActive }) => (isActive ? 'active' : '')} onClick={closeMenu}>Events</NavLink></li>
             <li><NavLink end to="/travel" className={({ isActive }) => (isActive ? 'active' : '')} onClick={closeMenu}>Travel</NavLink></li>

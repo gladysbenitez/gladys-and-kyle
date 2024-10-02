@@ -37,6 +37,7 @@ nav {
   padding: 0 20px; /* Some padding on the sides */
 }
 
+/* Hide original crest on mobile when menu is open */
 .wedding-crest {
   width: 55px;
   height: auto;
@@ -122,6 +123,7 @@ nav {
   top: 15px;
   transition: color 0.3s ease; /* Smooth transition for color change */
 }
+
 /* Desktop-Specific Styles */
 @media (min-width: 1025px) {
   .hamburger-icon {
@@ -153,12 +155,9 @@ nav {
     display: block !important; /* Show hamburger icon on screens smaller than 1024px */
   }
 
+  /* Hide original crest when the menu is open */
   .wedding-crest {
-    display: block; /* Show the wedding crest */
-    position: fixed;
-    top: 15px;
-    left: 20px;
-    z-index: 1102; /* Ensures it stays above other elements */
+    display: none; /* Hide crest in mobile view when menu is closed */
   }
 
   .nav-links {
@@ -182,7 +181,7 @@ nav {
     transform: translateX(0); /* Slide-in effect */
   }
 
-  .nav-links ul{
+  .nav-links ul {
     align-items: flex-start;
   }
 
@@ -192,8 +191,17 @@ nav {
     padding-left: 20px; /* Padding for the list items */
   }
 
-
   li {
     padding: 10px 20px;
+  }
+
+  /* Display the crest in the navigation menu */
+  .nav-crest {
+    margin-bottom: 20px; /* Add spacing around the crest */
+  }
+
+  .menu-crest {
+    width: 60px; /* Adjust the size as needed */
+    height: auto;
   }
 }
