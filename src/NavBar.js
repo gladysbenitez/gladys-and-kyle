@@ -1,11 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import './NavBar.css';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation(); // Get current path
+
+  // Determine color based on path
+  const getHamburgerColor = () => {
+    switch (location.pathname) {
+      case '/hotels':
+        return 'black';
+      case '/events':
+        return 'white';
+      case '/travel':
+        return 'blue';
+      // Add more cases as needed for other paths
+      default:
+        return 'white'; // Default color
+    }
+  };
 
   useEffect(() => {
     const isAuthenticated = sessionStorage.getItem('isAuthenticated') === 'true';
@@ -38,7 +54,7 @@ const NavBar = () => {
           className="hamburger-icon"
           onClick={toggleMenu}
           style={{
-            color: isMenuOpen ? 'white' : 'black', // Change color based on menu state
+            color: getHamburgerColor(), // Set color based on current path
             fontSize: '30px',
             cursor: 'pointer',
           }}
