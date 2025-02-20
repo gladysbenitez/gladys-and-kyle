@@ -24,7 +24,7 @@ const RSVPPage = () => {
       }
     };
   }, []);
-  
+
   // 🔍 Guest Name Search Function
   const handleGuestSearch = (e) => {
     const searchValue = e.target.value.trim();
@@ -246,21 +246,19 @@ const RSVPPage = () => {
               </div>
 
               {/* ✅ Submit Button */}
-              <button
-                type="submit"
-                className="submit-btn"
-                onClick={handleSubmit}   // Regular click event
-                onTouchStart={handleSubmit} // For touchscreens
-                onTouchEnd={(e) => e.target.click()} // Simulates a click
-                onPointerDown={handleSubmit}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    handleSubmit(e);
-                  }
-                }}
-              >
-                Submit
-              </button>
+             <button
+              type="button"  // ❗ Changed from "submit" to "button" to manually trigger submit
+              className="submit-btn"
+              onClick={handleSubmit}   // Regular click event
+              onTouchStart={handleSubmit} // For touchscreens
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  handleSubmit(e);
+                }
+              }}
+            >
+              Submit
+            </button>
             </form>
           </>
         )}
