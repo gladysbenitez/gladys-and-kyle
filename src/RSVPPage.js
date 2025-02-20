@@ -23,15 +23,24 @@ const RSVPPage = () => {
       return;
     }
   
-    // Find matching guests
+    // Find guests that match the search
     const matches = guestList.filter(
-      (guest) => guest.label.toLowerCase().includes(searchValue.toLowerCase())
+      (guest) => guest.label.toLowerCase().includes(searchValue.toLowerCase()) ||
+                 (guest.plusOnes && guest.plusOnes.some(plusOne => plusOne.toLowerCase().includes(searchValue.toLowerCase())))
     );
   
-    // Include plus ones of matched guests
-    let allMatches = [...matches];
+    let allMatches = [];
   
     matches.forEach((guest) => {
+      // Add the main guest
+      allMatches.push(guest);
+  
+      // If the searched name is a plus one, find the main guest they are associated with
+      if (guest.plusOnes && guest.plusOnes.includes(searchValue)) {
+        allMatches.push({ label: searchValue, value: searchValue, plusOnes: [] });
+      }
+  
+      // Add their plus ones
       if (guest.plusOnes && Array.isArray(guest.plusOnes)) {
         guest.plusOnes.forEach((plusOne) => {
           allMatches.push({ label: plusOne, value: plusOne, plusOnes: [] });
@@ -42,7 +51,6 @@ const RSVPPage = () => {
     // Remove duplicates
     setFilteredGuests([...new Map(allMatches.map((g) => [g.label, g])).values()]);
   };
-  
   
 
   // ✅ Select/Deselect guest names
@@ -226,7 +234,7 @@ const RSVPPage = () => {
               </div>
 
               {/* ✅ Submit Button */}
-              <button type="submit" className="submit-btn">
+              <button type="submit" className="submit-btn" onTouchEnd={(e) => e.target.click()}>
                 Submit
               </button>
             </form>
