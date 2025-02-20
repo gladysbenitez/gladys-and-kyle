@@ -76,9 +76,15 @@ const RSVPPage = () => {
   
 
   // 📤 Form submission to Google Sheets
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submit button clicked or touched"); // ✅ Debugging log
+  
+    if (isSubmitting) return; // Prevents multiple clicks
+    setIsSubmitting(true);  // Disable button to prevent duplicates
+  
+    console.log("Submit button clicked");
   
     const requestData = {
       guestName: selectedGuests.join(", "),
@@ -88,34 +94,34 @@ const RSVPPage = () => {
       dietary,
     };
   
-    console.log("Submitting RSVP:", requestData); // ✅ Debugging log
+    try {
+      const res = await fetch(process.env.REACT_APP_RSVP_API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(requestData),
+      });
   
-    fetch(process.env.REACT_APP_RSVP_API_URL, {
-      method: "POST",
-      headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body: JSON.stringify(requestData),
-    })
-      .then(async (res) => {
-        console.log("Raw Response:", res);
-        if (!res.ok) {
-          const text = await res.text();
-          console.error("Server Response Error:", text);
-          throw new Error("Network response was not ok");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        console.log("RSVP response:", data);
-        if (data.success) {
-          setShowConfetti(true);
-          setShowConfirmation(true);
-          setTimeout(() => setShowConfetti(false), 5000);
-        } else {
-          throw new Error("Google Sheets response error");
-        }
-      })
-      .catch((err) => console.error("Error submitting RSVP:", err));
+      if (!res.ok) {
+        throw new Error(`Server Error: ${res.status}`);
+      }
+  
+      const data = await res.json();
+      console.log("RSVP Response:", data);
+  
+      if (data.success) {
+        setShowConfetti(true);
+        setShowConfirmation(true);
+        setTimeout(() => setShowConfetti(false), 5000);
+      } else {
+        throw new Error("Google Sheets response error");
+      }
+    } catch (err) {
+      console.error("Error submitting RSVP:", err);
+    } finally {
+      setIsSubmitting(false); // Re-enable button after submission
+    }
   };
+  
   
   return (
     <div className="rsvp-page">
@@ -230,19 +236,19 @@ const RSVPPage = () => {
               </div>
 
               {/* ✅ Submit Button */}
-             <button
-              type="button"  // ❗ Changed from "submit" to "button" to manually trigger submit
-              className="submit-btn"
-              onClick={handleSubmit}   // Regular click event
-              onTouchStart={handleSubmit} // For touchscreens
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  handleSubmit(e);
-                }
-              }}
-            >
-              Submit
-            </button>
+              <button
+                type="button"
+                className="submit-btn"
+                onClick={handleSubmit}   // Only one event handler
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    handleSubmit(e);
+                  }
+                }}
+              >
+                Submit
+              </button>
+
             </form>
           </>
         )}
