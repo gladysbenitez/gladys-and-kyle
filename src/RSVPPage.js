@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import guestList from "./data/guestList"; // Import guest list
 import Confetti from "react-confetti"; // 🎉 Confetti effect
 import "./RSVPPage.css";
@@ -13,17 +13,7 @@ const RSVPPage = () => {
   const [showConfetti, setShowConfetti] = useState(false); // 🎉 Confetti animation
   const [showConfirmation, setShowConfirmation] = useState(false); // ✅ Confirmation Box
 
-  useEffect(() => {
-    const button = document.querySelector(".submit-btn");
-    if (button) {
-      button.addEventListener("touchend", handleSubmit);
-    }
-    return () => {
-      if (button) {
-        button.removeEventListener("touchend", handleSubmit);
-      }
-    };
-  }, []);
+
 
   // 🔍 Guest Name Search Function
   const handleGuestSearch = (e) => {
@@ -88,30 +78,24 @@ const RSVPPage = () => {
   // 📤 Form submission to Google Sheets
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    console.log("Submit button clicked or touched"); // ✅ Debugging log
+  
     const requestData = {
-      guestName: selectedGuests.join(", "), // Combine all selected names
-      plusOne: selectedGuests.length > 1 ? selectedGuests.slice(1).join(", ") : "", // All but first guest
+      guestName: selectedGuests.join(", "),
+      plusOne: selectedGuests.length > 1 ? selectedGuests.slice(1).join(", ") : "",
       numGuests,
-      attendance: response, // Accepts or Declines
+      attendance: response,
       dietary,
     };
   
-    console.log("Submitting RSVP:", requestData); // Debugging log
-    console.log("API URL:", process.env.REACT_APP_RSVP_API_URL);
-
+    console.log("Submitting RSVP:", requestData); // ✅ Debugging log
+  
     fetch(process.env.REACT_APP_RSVP_API_URL, {
       method: "POST",
-      headers: {
-        "Content-Type": "text/plain;charset=utf-8",
-  
-      },   
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
       body: JSON.stringify(requestData),
-      // mode: "cors" // ✅ Ensures CORS is enabled
-
     })
       .then(async (res) => {
-        console.log("Submitting RSVP:", requestData);
         console.log("Raw Response:", res);
         if (!res.ok) {
           const text = await res.text();
@@ -131,8 +115,8 @@ const RSVPPage = () => {
         }
       })
       .catch((err) => console.error("Error submitting RSVP:", err));
-       
-    }
+  };
+  
   return (
     <div className="rsvp-page">
       {/* 🎉 Confetti Animation */}
