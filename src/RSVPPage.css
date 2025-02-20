@@ -11,7 +11,7 @@
 /* Background Image Only for the RSVP Page */
 .rsvp-page {
   position: relative;
-  background: url('/public/images/florals.jpg') no-repeat center center fixed;
+  /* background: url('/public/images/florals.jpg') no-repeat center center fixed; */
   background-size: cover;
   min-height: 100vh;
   display: flex;
