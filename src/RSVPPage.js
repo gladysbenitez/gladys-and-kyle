@@ -95,7 +95,7 @@ const RSVPPage = () => {
   
       },   
       body: JSON.stringify(requestData),
-      mode: "cors" // ✅ Ensures CORS is enabled
+      // mode: "cors" // ✅ Ensures CORS is enabled
 
     })
       .then(async (res) => {
