@@ -234,7 +234,18 @@ const RSVPPage = () => {
               </div>
 
               {/* ✅ Submit Button */}
-              <button type="submit" className="submit-btn" onTouchEnd={(e) => e.target.click()}>
+              <button
+                type="submit"
+                className="submit-btn"
+                onClick={handleSubmit}   // Regular click event
+                onTouchStart={handleSubmit} // For touchscreens
+                onTouchEnd={(e) => e.target.click()} // Simulates a click
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    handleSubmit(e);
+                  }
+                }}
+              >
                 Submit
               </button>
             </form>
