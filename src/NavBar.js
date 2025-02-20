@@ -17,6 +17,8 @@ const NavBar = () => {
         return 'black';
       case '/travel':
         return 'white';
+      case '/rsvp':
+        return '#2a4c3a'
       default:
         return 'white'; // Default color
     }
@@ -55,7 +57,7 @@ const NavBar = () => {
           className="hamburger-icon"
           onClick={toggleMenu}
           style={{
-            color: getHamburgerColor(), // Set color based on current path
+            color: isMenuOpen ? "#FFFF" : getHamburgerColor(), // Set color based on current path
             fontSize: '30px',
             cursor: 'pointer',
           }}

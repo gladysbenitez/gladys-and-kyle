@@ -1,0 +1,81 @@
+const guestList = [
+    { label: "Ms. Elena Sanguinetti", value:"Elena Sanguinetti", plusOnes: [] },
+    { label: "Mr. Jorge Benitez", value: "Jorge Benitez", plusOnes: ["Mrs. Rocio Benitez"] }, 
+    { label: "Mrs. Diana Benitez", value: "Diana Benitez", plusOnes: ["Mr. Diego Banchero"] },
+    { label: "Mr. Ronald Benitez", value: "Ronald Benitez", plusOnes: [] },
+    { label: "Mr. Daryl Sanguinetti", value: "Daryl Sanguinetti", plusOnes: ["Miss. Sahary Sanguinetti"] }, 
+    { label: "Miss. Vanadia Badillo", value: "Vanadia Badillo", plusOnes: ["Mr. Spencer Mussetter"] },
+    { label: "Miss. Camila Pulecio", value: "Camila Pulecio", plusOnes: ["Mr. Nick Dispenza"] }, 
+
+    { label: "Ms. Doralicia Rivera", value:"Doralicia Rivera", plusOnes: ["Mr. Mathias Ihlenfeld"] },
+    { label: "Mr. Phillip Chang", value: "Phillip Chang", plusOnes: ["Mr. Kevin Manalaysay"] }, 
+    { label: "Miss. Cattie Khoury", value: "Cattie Khoury", plusOnes: [] },
+    { label: "Mr. Dru Sellers", value: "Dru Sellers", plusOnes: [] },
+    { label: "Miss. Stacy Skolnik", value: "Stacy Skolnik", plusOnes: [] }, 
+    { label: "Mr. Blaine Simmons", value: "Blaine Simmons", plusOnes: ["Miss. Lauren Lott"] },
+    { label: "Mr. Josh Giles", value: "Josh Giles", plusOnes: [] }, 
+
+    { label: "Miss. Christa Lara", value:"Christa Lara", plusOnes: [] },
+    { label: "Miss. Sara Lopez", value: "Sara Lopez", plusOnes: [] }, 
+    { label: "Mrs. Yesenia Tijerina", value: "Yesenia Tijerina", plusOnes: ["Mr. Joe Tijerina"] },
+    { label: "Mr. Christian Blandon", value: "Christian Blandon", plusOnes: ["Mrs. Valeria Blandon"] },
+    { label: "Miss. Sugey Zamora ", value: "Sugey Zamora", plusOnes: [] }, 
+    { label: "Mr. Menachem Senderowicz", value: " Menachem Senderowicz", plusOnes: [] },
+    { label: "Miss. Amanda Cura", value: "Amanda Cura", plusOnes: [] }, 
+
+    { label: "Mrs. Erica Gilligan", value:" Erica Gilligan", plusOnes: [ "Mr. Joe Gilligan"] },
+    { label: "Mr. Cory Cross", value: "Cory Cross", plusOnes: [] }, 
+    { label: "Mr. Jesse Riffert", value: "Jesse Riffert", plusOnes: [] },
+    { label: "Mr. Baxter Easley", value: "Baxter Easley", plusOnes: ["Mrs. Samantha Easley"] },
+    { label: "Mr. Troop Rolland ", value: "Troop Rolland", plusOnes: ["Mrs. Madison Rolland"] }, 
+    { label: "Mr. Will Owen", value: "Will Owen", plusOnes: ["Mrs. Rebecca Owen"] },
+    { label: "Mrs. Laura McNear", value: "Laura McNear", plusOnes: ["Mr. Steve McNear", "Miss. Elle McNear"] },
+
+    { label: "Mr. Danny Arnold", value:" Danny Arnold", plusOnes: [ "Mr. Joe Gilligan"] },
+    { label: "Mrs. Catherine Humphreys", value: "Catherine Humphreys", plusOnes: ["Mr. Sam Humphreys"] }, 
+    { label: "Ms. Maury Bernstien ", value: "  Maury Bernstien ", plusOnes: [] },
+    { label: "Mr. Kevin Cunningham", value: "Kevin Cunningham", plusOnes: ["Mrs. Jenice Cunningham"] },
+    { label: "Mrs. Sunny Bayley ", value: "Sunny Bayley", plusOnes: ["Mr. Graham Bayley"] }, 
+    { label: "Mr. Richard Mason", value: "Richard Mason", plusOnes: ["Mrs. Mary Ann Mason"] },
+    { label: "Mr. Richard Rolland", value: "Richard Rolland", plusOnes: ["Mrs. Kimberley Rolland"] }, 
+
+    { label: "Mr. Tadd Hatcher", value:"Tadd Hatcher", plusOnes: ["Mrs. Courtney Hatcher"] },
+    { label: "Mrs. Terri Walton", value: "Terri Walton", plusOnes: ['Mr. Tom Walton', "Zach Walton"] }, 
+    { label: "Mr. Cody Barker", value: "Cody Barker", plusOnes: ["Mrs. Jeannie Barker"] },
+    { label: "Mr. Travis McNear", value: "Travis McNear", plusOnes: ["Mrs. Anney Wang"] },
+    { label: "Mr. Garrett Huffines", value: "Garrett Huffines", plusOnes: ['Mrs. Madalene Huffines'] }, 
+    { label: "Mr. Taylor Hazlewood", value: "Taylor Hazlewood", plusOnes: ['Mrs. Ashley Hazlewood'] },
+    { label: "Mr. Ty Hazlewood", value: "Ty Hazlewood", plusOnes: [] },
+
+
+    { label: "Mr. Philip Koelsh", value:"Philip Koelsh", plusOnes: ['Mrs. Melissa Koelsh'] },
+    { label: "Mr. Bill Todd", value: "Bill Todd", plusOnes: ["Mrs. Anne Todd"] }, 
+    { label: "Mr. Marshall Rosenberg", value: "Marshall Rosenberg", plusOnes: ["Mrs. Robin Rosenberg"] },
+    { label: "Mr. Gary Hazlewood", value: "Gary Hazlewood", plusOnes: ["Mrs. Leslie Hazlewood"] },
+    { label: "Mr. John Beck", value: "John Beck", plusOnes: ["Miss. Grace Hill"] }, 
+    { label: "Mr. Nicholas Walton", value: "Nicholas Walton", plusOnes: ["Mrs. Georgette Walton"] },
+    { label: "Mr. John Herrin", value: "John Herrin", plusOnes: ["Mrs. Caroline Herrin"] }, 
+
+    { label: "Mr. Jay Rogers", value:"Jay Rogers", plusOnes: ["Mrs. Julie Rogers"] },
+    { label: "Ms. Lisa Russell", value: "Lisa Russell", plusOnes: [] }, 
+    { label: "Mr. Carl Schindewolf", value: "Carl Schindewolf", plusOnes: ["Mrs. Traci Schindewolf"] },
+    { label: "Ms. Carley Cunningham", value: "Carley Cunningham", plusOnes: ["Mr. Hunter Brook"] },
+    { label: "Mrs. Lisa Cunningham ", value: "Lisa Cunningham", plusOnes: ["Mr. Chris Cunningham"] }, 
+    { label: "Mr. Christopher Cunningham", value: "Christopher Cunningham", plusOnes: [] },
+    { label: "Miss. Fariha Ahmed", value: "Fariha Ahmed", plusOnes: ["Mr. Adeel Shams"] }, 
+
+    { label: "Mr. Don Jordan", value:"Don Jordan", plusOnes: ["Mrs. Barbara Jordan"] },
+    { label: "Ms. Andresa Gonzalez", value: "Andresa Gonzalez", plusOnes: [] }, 
+    { label: "Ms. Elizabeth Sanguinetti", value: "Ms. Elizabeth Sanguinetti", plusOnes: ["Miss Samantha", 
+    "Miss Carolina"] },
+    { label: "Mr. Rodolfo Cruz", value: "Rodolfo Cruz", plusOnes: [] },
+    { label: "Ms. Maria Luisa C. Benitez ", value: "Maria Luisa C. Benitez", plusOnes: [] }, 
+    { label: "Mr. Don Che", value: "Don Che", plusOnes: ["Mrs. Christina Miller"] },
+    { label: "Mr. Bob Wynne", value: "Bob Wynne", plusOnes: ["Ms. Kristina Wilson"] }, 
+
+    { label: "Mr. Mr. Adam Konikowski", value: "Mr. Adam Konikowski", plusOnes: ["Mrs. Ashley Konikowski"] },
+    { label: "Mr. Shehzad Khan", value: "Shehzad Khan", plusOnes: ["Mrs. Isabel Khan"] }, 
+];
+
+export default guestList;
+

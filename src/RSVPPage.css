@@ -1,0 +1,365 @@
+/* Import Custom Font */
+@font-face {
+    font-family: 'Desirable Calligraphy';
+    src: 
+         url('./fonts/Desirable Calligraphy.ttf') format('truetype'),
+         url('./fonts/Desirable Calligraphy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Background Image Only for the RSVP Page */
+.rsvp-page {
+  position: relative;
+  background: url('/public/images/florals.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+/* Subtle Overlay to Keep Background from Being Overwhelming */
+.rsvp-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+/* RSVP Form Container */
+.rsvp-container {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 600px;
+  margin: 90px auto 50px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 15px;
+  border: 3px solid #2a4c3a;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title Styling (Smaller & More Balanced) */
+.rsvp-container h1 {
+  font-family: 'Desirable Calligraphy', cursive;
+  font-size: 34px; /* Adjusted to prevent overlap */
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  color: #2a4c3a;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Date Styling (More Space Below) */
+.rsvp-container p {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  color: #2a4c3a; 
+  margin-top:-5px;
+  margin-bottom: 30px; /* Creates breathing room */
+}
+
+/* RSVP Options */
+.rsvp-container .rsvp-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+/* Name Input (Proper Alignment) */
+.name-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.name-input label {
+  font-family: 'Desirable Calligraphy', cursive;
+  font-size: 22px; /* Reduced size for balance */
+  color: #2a4c3a;
+}
+
+.name-input input {
+  font-family: 'Desirable Calligraphy', cursive;
+  font-size: 22px;
+  border: none;
+  border-bottom: 1.2px solid #6d8c78;
+  background: transparent;
+  color: #2a4c3a;
+  width: 100%;
+  padding-left: 10px;
+  transition: border 0.3s ease-in-out;
+}
+
+.name-input input:focus {
+  border-bottom: 1.5px solid #2a4c3a;
+}
+
+/* No. of Guests Input */
+.rsvp-container .guest-count {
+  margin-top: 25px;
+}
+
+.rsvp-container .guest-count label {
+  display: block;
+  font-weight: bold;
+  color: #2a4c3a;
+  margin-bottom: 5px;
+}
+
+.rsvp-container input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #2a4c3a;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #2a4c3a;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Dietary Requirements */
+.rsvp-container .dietary-requirements {
+  margin-top: 25px;
+}
+
+.rsvp-container .dietary-requirements label {
+  display: block;
+  font-weight: bold;
+  color: #2a4c3a;
+  margin-bottom: 5px;
+}
+
+.rsvp-container textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 2px solid #2a4c3a;
+  border-radius: 5px;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  resize: none;
+  color: #2a4c3a;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Remove Blue Outline on Click */
+.rsvp-container input:focus,
+.rsvp-container textarea:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #2a4c3a;
+}
+
+/* Luxury Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to bottom, #2a4c3a, #1f3b2e);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #2a4c3a;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to bottom, #bfa58a, #a08060);
+  color: white;
+  transform: scale(1.07);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 📱 Mobile & Tablet Fixes */
+@media (max-width: 768px) {
+  .rsvp-container {
+    width: 92%;
+    padding: 30px;
+    margin: 100px auto;
+  }
+
+  .rsvp-container h1 {
+    font-size: 28px; /* Reduced title for mobile */
+  }
+
+  .rsvp-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .name-input label {
+    font-size: 20px;
+  }
+
+  .name-input input {
+    font-size: 18px;
+  }
+
+  .submit-btn {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rsvp-container {
+    width: 90%;
+    padding: 25px;
+    margin: 80px auto;
+  }
+
+  .rsvp-container h1 {
+    font-size: 17px;
+  }
+
+  .rsvp-container p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .name-input label {
+    font-size: 18px;
+  }
+
+  .name-input input {
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Confirmation Message Styling */
+.confirmation-message {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    border: 2px solid #2a4c3a;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin: 0 auto;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  /* Elegant Thank You Title */
+  .thank-you-title {
+    font-family: 'Desirable Calligraphy', cursive;
+    font-size: 32px;
+    color: #2a4c3a;
+    margin-bottom: 10px;
+  }
+  
+  /* Refined Text Styling */
+  .thank-you-text, .thank-you-details, .thank-you-note {
+    font-size: 18px;
+    color: #2a4c3a;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  
+  /* Subtle Emphasis on Details */
+  .thank-you-details strong {
+    color: #bfa58a;
+    font-weight: bold;
+  }
+  
+  /* Contact Us Link */
+  .thank-you-note a {
+    color: #bfa58a;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .thank-you-note a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Elegant "Return to Edit RSVP" Button */
+  .return-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: linear-gradient(to bottom, #2a4c3a, #1f3b2e);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .return-btn:hover {
+    background: linear-gradient(to bottom, #bfa58a, #a08060);
+    transform: scale(1.05);
+  }
+/*   
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  /* 🔽 Guest Dropdown Styles */
+/* 🔽 Guest Dropdown Styles */
+.guest-dropdown {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #2a4c3a;
+    border-radius: 8px;
+    padding: 12px;
+    max-width: 100%;
+    margin-top: 8px;
+  }
+  
+  /* 🔹 Grouping Main Guest & Plus One */
+  .guest-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+  
+  /* 🎯 Aligns the checkboxes nicely */
+  .guest-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+  }
+  
+  .guest-option input {
+    margin-right: 10px;
+    transform: scale(1.1);
+  }
+  
+  /* 🌿 Indent the plus-one option slightly */
+  .guest-option.plus-one {
+    padding-left: 25px;
+  }
+  
