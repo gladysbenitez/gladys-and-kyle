@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import guestList from "./data/guestList"; // Import guest list
 import Confetti from "react-confetti"; // 🎉 Confetti effect
 import "./RSVPPage.css";
@@ -13,6 +13,18 @@ const RSVPPage = () => {
   const [showConfetti, setShowConfetti] = useState(false); // 🎉 Confetti animation
   const [showConfirmation, setShowConfirmation] = useState(false); // ✅ Confirmation Box
 
+  useEffect(() => {
+    const button = document.querySelector(".submit-btn");
+    if (button) {
+      button.addEventListener("touchend", handleSubmit);
+    }
+    return () => {
+      if (button) {
+        button.removeEventListener("touchend", handleSubmit);
+      }
+    };
+  }, []);
+  
   // 🔍 Guest Name Search Function
   const handleGuestSearch = (e) => {
     const searchValue = e.target.value.trim();
