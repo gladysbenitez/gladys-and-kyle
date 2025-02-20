@@ -240,6 +240,7 @@ const RSVPPage = () => {
                 onClick={handleSubmit}   // Regular click event
                 onTouchStart={handleSubmit} // For touchscreens
                 onTouchEnd={(e) => e.target.click()} // Simulates a click
+                onPointerDown={handleSubmit}
                 onKeyDown={(e) => {
                   if (e.key === "Enter") {
                     handleSubmit(e);
