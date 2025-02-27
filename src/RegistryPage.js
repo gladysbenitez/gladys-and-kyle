@@ -47,6 +47,7 @@ const registryHubs = [
     }));
     setItems(updatedItems);
   }, []);
+  console.log("RegistryPage Loaded");
 
   const markAsPurchased = (id) => {
     setItems((prevItems) => {
