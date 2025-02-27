@@ -92,7 +92,7 @@ const registryItems = [
       },
       {
         id: 10,
-        name: "Hillcrest White 12 Piece Dinnerware Set ( 4 person dining )",
+        name: `Hillcrest White 12 Piece Dinnerware Set\n(4 person dining)`,
         price: "$495",
         images: ["https://assets.sohohome.com/cdn-cgi/image/fit=crop%2cformat=auto%2cquality=75%2cwidth=900%2cheight=1000%2ctrim=388%3b0%3b389%3b0/images/original/187073-79938270-listingjpg.jpg"],
         storeLink: "https://www.sohohome.com/us/products/hillcrest-12-piece-dinnerware-set-white/79938270",
