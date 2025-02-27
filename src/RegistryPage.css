@@ -6,19 +6,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 50px;
   }
-  /* Subtle Overlay to Keep Background from Being Overwhelming */
-.registry-page::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  
 /* General Page Styling */
 .registry-container {
     max-width: 1200px;
@@ -26,14 +15,14 @@
     padding: 100px 20px;
     text-align: center;
     font-family: 'Helvetica Neue', sans-serif;
-    background: rgba(25, 32, 61, 0.82); /* Semi-transparent black overlay */
+    background: #fdfcfc;
 }
 
 /* Title Styling */
 .registry-title {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: bold;
-    color: white;
+    color: #2c2c2c;
     margin-bottom: 40px;
     letter-spacing: 1px;
     border-bottom: 2px solid #ddd;
@@ -200,6 +189,78 @@
     max-width: 450px;
     font-family: 'Helvetica Neue', sans-serif;
 }
+/* --- FRONTGATE MODAL --- */
+.frontgate-modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+}
+
+/* Frontgate Modal Title */
+.frontgate-modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c2c2c;
+    font-family: 'Helvetica Neue', sans-serif;
+    margin-bottom: 15px;
+}
+
+/* Frontgate Modal Text */
+.frontgate-modal-text {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+    padding: 0 15px;
+}
+
+/* Frontgate Modal Button */
+.frontgate-button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto 0;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #007bff;
+    border-radius: 6px;
+    border: none;
+    transition: background 0.3s ease-in-out;
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+.frontgate-button:hover {
+    background: #0056b3;
+}
+
+
+/* 
+/* frontgate Cancel Button */
+.frontgate-cancel-button {
+    background: #e6e6e6;
+    color: #555;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+} */
+
+.cancel-button:hover {
+    background: #ccc;
+}
+
 
 /* Title */
 .modal-title {
@@ -316,9 +377,9 @@
 }
 
 .registry-hubs-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: white;
+    color: #2c2c2c;
     margin-bottom: 45px;
 }
 

@@ -161,7 +161,7 @@ export default function RegistryPage() {
               Once you've completed your purchase, kindly return to this page and click <strong>"Mark as Purchased"</strong> to help us keep track. Thank you!
             </p>
             <button className="confirm-button" onClick={handleProceedToSite}>
-              Proceed to {showRedirectModal.name} Website
+              Proceed to Website
             </button>
           </div>
         </div>
@@ -188,19 +188,66 @@ export default function RegistryPage() {
           </div>
         </div>
       )}
+      {/* Frontgate Modal */}
+{showFrontgateModal && (
+  <div className="modal-overlay">
+    <div className="frontgate-modal-content">
+      <h3 className="frontgate-modal-title">You're Leaving This Page</h3>
+      <p className="frontgate-modal-text">
+        You will now be directed to the Frontgate website to purchase this item. 
+        Please note that Frontgate <strong>does not</strong> track purchases.
+        <br /><br />
+        Once you've completed your purchase, kindly return to this page and 
+        click <strong>"Mark as Purchased"</strong> to help us keep track. Thank you!
+      </p>
+      <button
+        className="frontgate-button"
+        onClick={() => {
+          window.open(
+            "https://www.frontgate.com/SharedWishListView?storeId=10053&catalogId=10053&langId=-1&externalId=17456580&wishTitle=GKWeddingRegistry&utm_medium=referral",
+            "_blank"
+          );
+          setShowFrontgateModal(false);
+        }}
+      >
+        Proceed to Frontgate Website
+      </button>
+      <button className="frontgate-cancel-button" onClick={() => setShowFrontgateModal(false)}>
+        Cancel
+      </button>
+    </div>
+  </div>
+)}
 
-      {/* External Store Registries Section */}
-      <div className="registry-hubs-container">
-        <h2 className="registry-hubs-title">Find Us on These Registries</h2>
-        <div className="registry-hubs-grid">
-          {registryHubs.map((hub, index) => (
-            <a key={index} href={hub.link} target="_blank" rel="noopener noreferrer" className="registry-hub">
-              <img src={hub.logo} alt={`${hub.name} Logo`} />
-            </a>
-          ))}
-        </div>
-      </div>
+
+     {/* External Store Registries */}
+<div className="registry-hubs-container">
+  <h2 className="registry-hubs-title">Find Us on These Registries</h2>
+  <div className="registry-hubs-grid">
+    {registryHubs.map((hub, index) => (
+      <a
+        key={index}
+        href={hub.name === "Frontgate" ? undefined : hub.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="registry-hub"
+        onClick={
+          hub.name === "Frontgate"
+            ? (e) => {
+                e.preventDefault();
+                setShowFrontgateModal(true);
+              }
+            : undefined
+        }
+      >
+        <img src={hub.logo} alt={`${hub.name} Logo`} />
+      </a>
+    ))}
+  </div>
+</div>
+
     </div>
     </div>
+
   );
 }
