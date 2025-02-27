@@ -19,6 +19,8 @@ const NavBar = () => {
         return 'white';
       case '/rsvp':
         return '#2a4c3a'
+      case '/registry':
+        return "#060646f2"
       default:
         return 'white'; // Default color
     }

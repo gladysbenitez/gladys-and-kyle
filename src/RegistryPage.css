@@ -11,6 +11,7 @@
   /* Fix stretched background on mobile */
 @media (max-width: 768px) {
     .registry-page {
+        background: url('/public/images/mon.jpg') repeat center center fixed;
         background-size: contain; /* Prevents extreme stretching */
         background-attachment: scroll; /* Stops fixed background issues */
     }
