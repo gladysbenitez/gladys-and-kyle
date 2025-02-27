@@ -15,7 +15,7 @@
     padding: 50px 35px;
     text-align: center;
     font-family: 'Helvetica Neue', sans-serif;
-    background: #fdfcfc;
+    background: rgba(253, 252, 252, 0.85); /* Adjust the last value (0.85) for transparency */
 }
 
 /* Title Styling */

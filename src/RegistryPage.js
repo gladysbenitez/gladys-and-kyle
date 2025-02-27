@@ -36,8 +36,8 @@ const registryHubs = [
 ];
 
   const googleScriptURL =
-    "https://script.google.com/macros/s/AKfycbwA2jvRt0guQU02bJbodFyIGo-XBY_kUDsmbYh7LsfqwslnFlb9-hzvbNjjlaY-HMAc/exec";
-
+  "https://script.google.com/macros/s/AKfycbwUTQpZScR1mwbJ5gp6CQ5O0HFC0ImMGixfwKiIbAnD-nv-k_gERTRfk8tIVd-XQ9OF/exec";
+  
   useEffect(() => {
     const savedPurchasedItems =
       JSON.parse(localStorage.getItem("purchasedItems")) || {};
