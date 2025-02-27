@@ -8,6 +8,13 @@
     justify-content: center;
     padding: 50px;
   }
+  /* Fix stretched background on mobile */
+@media (max-width: 768px) {
+    .registry-page {
+        background-size: contain; /* Prevents extreme stretching */
+        background-attachment: scroll; /* Stops fixed background issues */
+    }
+}
 /* General Page Styling */
 .registry-container {
     max-width: 1200px;
