@@ -8,6 +8,17 @@
     font-style: normal;
 }
 
+.rsvp-title {
+  font-family: 'Desirable Calligraphy', cursive !important;
+  font-size: 34px; /* Adjusted to prevent overlap */
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  color: #2a4c3a;
+  text-align: center;
+  margin-bottom: 30px;
+  
+}
 /* Background Image Only for the RSVP Page */
 .rsvp-page {
   position: relative;
@@ -57,9 +68,10 @@
   }
 }
 
+
 /* Title Styling (Smaller & More Balanced) */
 .rsvp-container h1 {
-  font-family: 'Desirable Calligraphy', cursive;
+  font-family:'Desirable Calligraphy', cursive ;
   font-size: 34px; /* Adjusted to prevent overlap */
   letter-spacing: 1.5px;
   line-height: 1.2;

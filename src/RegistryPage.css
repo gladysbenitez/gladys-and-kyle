@@ -23,7 +23,10 @@
     padding: 50px 35px;
     text-align: center;
     font-family: 'Helvetica Neue', sans-serif;
-    background: rgba(253, 252, 252, 0.85); /* Adjust the last value (0.85) for transparency */
+    background: rgba(255, 250, 240, 0.85); /* Adjust the last value (0.85) for transparency */
+    border: 3px solid #a65462;
+    box-shadow: 0 8px 24px rgba(43, 35, 35, 0.2);
+
 }
 
 /* Title Styling */
@@ -33,7 +36,7 @@
     color: #2c2c2c;
     margin-bottom: 40px;
     letter-spacing: 1px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #a65462;
     display: inline-block;
     padding-bottom: 10px;
 }
