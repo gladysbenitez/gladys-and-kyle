@@ -2,7 +2,16 @@ import { useState, useEffect } from "react";
 import "./RegistryPage.css";
 import registryItems from "./data/registryItems";
 
-// External store registry links
+
+
+const RegistryPage= () => {
+  const [items, setItems] = useState([]);
+  const [selectedImage, setSelectedImage] = useState({});
+  const [showForm, setShowForm] = useState(null);
+  const [showRedirectModal, setShowRedirectModal] = useState(null);
+  const [formData, setFormData] = useState({ guestName: "", quantity: 1 });
+  const [showFrontgateModal, setShowFrontgateModal] = useState(false);
+  // External store registry links
 const registryHubs = [
   {
     name: "Frontgate",
@@ -25,14 +34,6 @@ const registryHubs = [
     link: "https://www.cb2.com/gift-registry/gladys-benitez-and-kyle-cunningham/r7130559",
   },
 ];
-
-export default function RegistryPage() {
-  const [items, setItems] = useState([]);
-  const [selectedImage, setSelectedImage] = useState({});
-  const [showForm, setShowForm] = useState(null);
-  const [showRedirectModal, setShowRedirectModal] = useState(null);
-  const [formData, setFormData] = useState({ guestName: "", quantity: 1 });
-  const [showFrontgateModal, setShowFrontgateModal] = useState(false);
 
   const googleScriptURL =
     "https://script.google.com/macros/s/AKfycbwA2jvRt0guQU02bJbodFyIGo-XBY_kUDsmbYh7LsfqwslnFlb9-hzvbNjjlaY-HMAc/exec";
@@ -251,3 +252,5 @@ export default function RegistryPage() {
 
   );
 }
+
+export default RegistryPage;
