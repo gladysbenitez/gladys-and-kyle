@@ -7,7 +7,7 @@ import GalleryPage from './GalleryPage';
 import EventsPage from './EventsPage';
 import TravelPage from './TravelPage';
 import HotelsPage from './HotelsPage';
-import RegistryPage from './Registry';
+import RegistryPage from './RegistryPage';
 import ExplorePage from './Explore';
 import NavBar from './NavBar'; // Your NavBar component
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
