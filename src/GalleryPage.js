@@ -59,7 +59,7 @@ const GalleryPage = () => {
   return (
     <div className="gallery-container">
       {/* Feature image for smooth scroll */}
-      <div
+      {/* <div
         className="feature-image"
         onClick={() =>
           window.scrollTo({
@@ -68,8 +68,31 @@ const GalleryPage = () => {
           })
         }
       >
-        <img src="/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-9.jpg" alt="Featured" />
+        <img src="/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-52.jpg" alt="Featured" />
+      </div> */}
+
+    {/* Feature Image Section with Text */}
+    <div className="feature-section">
+      <div className="feature-image" onClick={() =>
+          window.scrollTo({
+            top: document.querySelector(".gallery-grid").offsetTop,
+            behavior: "smooth",
+          })
+        }>
+        <img
+          src="/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-52.jpg"
+          alt="Featured"
+        />
       </div>
+      <div className="feature-text">
+        <h2>Gladys & Kyle | Aspen</h2>
+        <div className="feature-underline"></div>
+        <p>February 22, 2024</p>
+      </div>
+    </div>
+
+
+
 
       {/* Masonry Grid */}
       <div className="gallery-grid" ref={gridRef}>

@@ -3,18 +3,69 @@
     padding: 20px;
     z-index: 999 !important;
 }
+/* Feature Section - Puts Image and Text Side by Side */
+.feature-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Space between image and text */
+    max-width: 1200px;
+    margin: 40px auto;
+}
 
-/* Feature Image */
-.feature-image img {
-    width: 100%;
-    max-width: 600px;
-    cursor: pointer;
+
+.feature-image {
+    width: 100%; /* Make it full width */
+    max-width: 1200px; /* Limit max size so it doesn't get too big */
+    height: auto; /* Maintain aspect ratio */
+    display: flex;
+    justify-content: center;
+    margin: 20px auto; /* Centering */
+    cursor: pointer; /* Show it's clickable */
     transition: transform 0.3s ease-in-out;
 }
 
-.feature-image img:hover {
-    transform: scale(1.05);
+.feature-image img {
+    width: 100%;
+    max-height: 500px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensures the image fills the area properly */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
 }
+
+/* Add hover effect to make it feel interactive */
+.feature-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+/* Feature Text */
+.feature-text {
+    width: 40%;
+    font-family: "Playfair Display", serif; /* Match luxury wedding aesthetic */
+    text-align: left;
+}
+
+.feature-text h2 {
+    font-size: 28px;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-text p {
+    font-size: 16px;
+    color: #444;
+    font-weight: light;
+}
+
+/* Underline Effect */
+.feature-underline {
+    width: 12%;
+    height: 2px;
+    background: black;
+    margin: 5px 0 15px;
+}
+
 
 /* Masonry Grid Setup */
 .gallery-grid {
@@ -154,7 +205,7 @@
 @media (max-width: 1200px) {
     .gallery-sizer,
     .gallery-item {
-        width: 43.33%;
+        width: 60%;
     }
 }
 
