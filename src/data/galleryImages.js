@@ -26,10 +26,31 @@ const images = [
     '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-126.jpg',
     '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-127.jpg', 
     '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-129.jpg', 
-    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-130.jpg'
-
-
-
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-130.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-143.png', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-150.jpg', 
+    'images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-151.jpg',
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-171.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-172.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-173.png', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-180.png', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-182.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-184.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-188.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-191.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-192.jpg',
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-193.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-198.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-199.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-206.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-221.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-230.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-236.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-237.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-238.jpg',
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-268.jpg', 
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-273.jpg',
+    '/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-278.png', 
   ];
 
   export default images;
