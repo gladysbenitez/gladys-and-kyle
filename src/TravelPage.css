@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     padding: 40px 20px;
-    background-color: #faf9f6; /* Soft cream */
+    background-color: #faf9f6; 
 }
 
 /* Content Wrapper */
@@ -20,7 +20,7 @@
     font-family: 'Playfair Display', serif;
     font-size: 36px;
     text-align: center;
-    color: #9b7653; /* Elegant gold */
+    color: #9b7653; 
     margin-bottom: 20px;
 }
 
@@ -35,7 +35,7 @@
 .travel-page-subheading {
     font-family: 'Cinzel', serif;
     font-size: 24px;
-    color: #6a8a82; /* Olive green */
+    color: #6a8a82; 
     margin-top: 30px;
     border-bottom: 2px solid #9b7653;
     padding-bottom: 5px;
