@@ -22,8 +22,8 @@
     margin: auto;
     padding: 40px 35px;
     text-align: center;
-    font-family: 'Helvetica Neue', sans-serif;
-    background: rgba(255, 250, 240, 0.85); /* Adjust the last value (0.85) for transparency */
+    font-family: "Playfair Display", serif !important;
+    background: rgba(253, 253, 253, 0.85); /* Adjust the last value (0.85) for transparency */
     border: 3px solid #27225f;
     box-shadow: 0 8px 24px rgba(43, 35, 35, 0.2);
 
