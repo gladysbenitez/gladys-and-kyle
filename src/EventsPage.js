@@ -15,7 +15,7 @@ const EventsPage = () => {
       {/* The img tag can be used as a fallback, but if the video should always play, you can remove it */}
       {/* <img className='home-background-media' src='/images/Screenshot 2024-05-06 at 4.58.11 PM.png' alt="Background" /> */}
       <div className="center-container">
-        <h1 className='header-text'>Coming Soon...</h1> 
+        <h1 className='header-text'>If you received an invitation, then you know the events </h1> 
         <h1 className='header-text'> Capri, Italy </h1>
         <h1 className='header-text'>2025</h1>
         <audio autoPlay loop muted={!muted}>
