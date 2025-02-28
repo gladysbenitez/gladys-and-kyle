@@ -30,7 +30,7 @@ const GalleryPage = () => {
         masonryInstance.current.destroy();
       }
     };
-  }, [images]);
+  }, []);
 
   const openModal = (index) => {
     setSelectedImage(images[index]);

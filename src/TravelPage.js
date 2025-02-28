@@ -11,7 +11,7 @@ const TravelPage = () => {
             <strong>Hi, it’s me—the bride, Gladys! 🎉</strong>  
             Thank you for your excitement! We are so looking forward to celebrating with you.  
             I am personally coding this entire website from scratch (yes, really), so it’s taking longer than a regular wedding website. While the User Interface of this current page is not to my liking, i know many of you are anxious for more details.. so for now please ignore the design for this page. 
-            But for those who need travel details **RIGHT THIS SECOND**, here’s a friendly guide to help you get to Capri! ✈️🚢
+            For those who need travel details **RIGHT THIS SECOND**, here’s a friendly guide to help you get to Capri! ✈️🚢
           </p>
         </div>
 
