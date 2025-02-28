@@ -1,0 +1,173 @@
+.gallery-container {
+    text-align: center;
+    padding: 20px;
+    z-index: 999 !important;
+}
+
+/* Feature Image */
+.feature-image img {
+    width: 100%;
+    max-width: 600px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Masonry Grid Setup */
+.gallery-grid {
+    max-width: 100vw;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Sizer for Columns */
+.gallery-sizer {
+    width: 25%;
+}
+
+/* Masonry Items (Images) */
+.gallery-item {
+    width: 25%;
+    /* padding: 8px; Spacing between images */
+    box-sizing: border-box;
+}
+
+/* Ensures spacing is uniform */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    padding: 6px 6px;
+}
+
+/* Add EVEN gaps between rows & columns */
+.masonry-layout {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px; /* Compensate for padding */
+}
+
+.masonry-layout .gallery-item {
+    padding: 8px; /* Spacing between items */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    backdrop-filter: blur(5px);
+}
+
+/* Modal */
+.gallery-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.gallery-modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Close Button */
+.gallery-modal .close-button {
+    position: fixed;
+    top: 6vh;
+    right: 20px;
+    font-size: 3vh;
+    color: #A0A0A0;
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: lighter;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.gallery-modal .close-button:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Left & Right Arrows */
+.gallery-modal .prev-button,
+.gallery-modal .next-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-5%);
+    font-size: 4vh;
+    color: #A0A0A0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    transition: opacity 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.gallery-modal .prev-button:hover,
+.gallery-modal .next-button:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Positioning Arrows */
+.gallery-modal .prev-button {
+    left: 30px;
+}
+
+.gallery-modal .next-button {
+    right: 30px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .gallery-sizer,
+    .gallery-item {
+        width: 43.33%;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-sizer,
+    .gallery-item {
+        width: 70%;
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery-sizer,
+    .gallery-item {
+        width: 100%;
+    }
+}

@@ -1,0 +1,92 @@
+/* General Container */
+.travel-page-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #faf9f6; /* Soft cream */
+}
+
+/* Content Wrapper */
+.travel-page-content {
+    max-width: 800px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.travel-page-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    text-align: center;
+    color: #9b7653; /* Elegant gold */
+    margin-bottom: 20px;
+}
+
+/* Intro Paragraph */
+.travel-page-intro {
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Subheadings */
+.travel-page-subheading {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    color: #6a8a82; /* Olive green */
+    margin-top: 30px;
+    border-bottom: 2px solid #9b7653;
+    padding-bottom: 5px;
+}
+
+/* Step Section */
+.travel-page-step {
+    background: rgba(255, 236, 210, 0.4);
+    border-left: 5px solid #9b7653;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Tips Box */
+.travel-page-tip {
+    background: #eef7ee;
+    border-left: 5px solid #6a8a82;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Alert Box */
+.travel-page-alert {
+    background: rgba(255, 99, 71, 0.1);
+    color: #cc4b37;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Footer */
+.travel-page-footer {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #777;
+}
+
+/* Links */
+.travel-page-content a {
+    color: #6a8a82;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.travel-page-content a:hover {
+    text-decoration: underline;
+}

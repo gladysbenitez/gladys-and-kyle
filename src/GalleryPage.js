@@ -1,28 +1,111 @@
-import React, { useState } from 'react';
-import './HomePage.css';
+import React, { useState, useEffect, useRef } from "react";
+import Masonry from "masonry-layout";
+import imagesLoaded from "imagesloaded";
+import "./GalleryPage.css";
+import images from "./data/galleryImages"; // Your images
 
 const GalleryPage = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [muted, setMuted] = useState(true); // Controls the audio muting
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(null);
+  const gridRef = useRef(null);
+  const masonryInstance = useRef(null);
+
+  useEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
+
+    const imgLoad = imagesLoaded(grid, () => {
+      masonryInstance.current = new Masonry(grid, {
+        itemSelector: ".gallery-item",
+        columnWidth: ".gallery-sizer", // Defines how wide each column is
+        percentPosition: true, // Makes images scale properly
+        gutter: 15, // Spacing between images
+        fitWidth: true, // Keeps grid centered
+      });
+    });
+
+    return () => {
+      imgLoad.off("progress");
+      if (masonryInstance.current) {
+        masonryInstance.current.destroy();
+      }
+    };
+  }, [images]);
+
+  const openModal = (index) => {
+    setSelectedImage(images[index]);
+    setCurrentIndex(index);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    setCurrentIndex(null);
+  };
+
+  const prevImage = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+      setSelectedImage(images[currentIndex - 1]);
+    }
+  };
+
+  const nextImage = () => {
+    if (currentIndex < images.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+      setSelectedImage(images[currentIndex + 1]);
+    }
+  };
 
   return (
-    <div className='main-content'>
-      <video className="home-background-media" autoPlay loop muted playsInline>
-        <source src="https://www.sugokuii-events.com/worldofsugo-img/seawave.mp4" type="video/mp4" />
-      </video>
-      {/* The img tag can be used as a fallback, but if the video should always play, you can remove it */}
-      {/* <img className='home-background-media' src='/images/Screenshot 2024-05-06 at 4.58.11 PM.png' alt="Background" /> */}
-      <div className="center-container">
-        <h1 className='header-text'>Coming Soon...</h1> 
-        <h1 className='header-text'> Capri, Italy </h1>
-        <h1 className='header-text'>2025</h1>
-        <audio autoPlay loop muted={!muted}>
-          <source src="https://www.sugokuii-events.com/media/abbronzatissima-sugoworld.mp3" type="audio/mpeg" />
-        </audio>
+    <div className="gallery-container">
+      {/* Feature image for smooth scroll */}
+      <div
+        className="feature-image"
+        onClick={() =>
+          window.scrollTo({
+            top: document.querySelector(".gallery-grid").offsetTop,
+            behavior: "smooth",
+          })
+        }
+      >
+        <img src="/images/engagement/Gladys-Kyle-Aspen-Winter-Proposal-Photography-by-Jacie-Marguerite-9.jpg" alt="Featured" />
       </div>
+
+      {/* Masonry Grid */}
+      <div className="gallery-grid" ref={gridRef}>
+        <div className="gallery-sizer"></div> {/* Invisible sizer for consistent columns */}
+        {images.map((src, index) => (
+          <div className="gallery-item" key={index} onClick={() => openModal(index)}>
+            <img src={src} alt={`Gallery item ${index}`} loading="lazy" />
+          </div>
+        ))}
+      </div>
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div className="lightbox" onClick={closeModal}>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <div className="gallery-modal">
+              <button className="close-button" onClick={closeModal}>
+                ×
+              </button>
+              {currentIndex > 0 && (
+                <button className="prev-button" onClick={prevImage}>
+                  ‹
+                </button>
+              )}
+              <img src={selectedImage} alt="Enlarged view" className="lightbox-img" />
+              {currentIndex < images.length - 1 && (
+                <button className="next-button" onClick={nextImage}>
+                  ›
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
-
 
 export default GalleryPage;
