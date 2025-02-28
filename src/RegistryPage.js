@@ -37,7 +37,7 @@ const registryHubs = [
 
   const googleScriptURL =
   "https://script.google.com/macros/s/AKfycbwUTQpZScR1mwbJ5gp6CQ5O0HFC0ImMGixfwKiIbAnD-nv-k_gERTRfk8tIVd-XQ9OF/exec";
-  
+
   useEffect(() => {
     const savedPurchasedItems =
       JSON.parse(localStorage.getItem("purchasedItems")) || {};
@@ -101,7 +101,7 @@ const registryHubs = [
   return (
     <div className="registry-page">
     <div className="registry-container">
-      <h2 className="registry-title">Gifts We’d Love</h2>
+      <h2 className="registry-title">Your presence is the best gift, but if you’d like to contribute… Here are some gifts we’d love</h2>
 
       {/* Custom Registry Items */}
       <div className="registry-grid">
