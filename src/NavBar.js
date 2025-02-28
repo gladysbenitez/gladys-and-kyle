@@ -16,7 +16,7 @@ const NavBar = () => {
       case '/events':
         return 'black';
       case '/travel':
-        return 'white';
+        return '#9b7653';
       case '/rsvp':
         return '#2a4c3a'
       case '/registry':
