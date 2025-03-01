@@ -1,7 +1,7 @@
   // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
 import LandingPage from './LandingPage';
-import HomePage from './HomePage';
+import WelcomePage from './WelcomePage';
 import RSVPPage from './RSVPPage';
 import GalleryPage from './GalleryPage';
 import EventsPage from './EventsPage';
@@ -33,7 +33,7 @@ const App = () => {
           <>
             <NavBar />
             <Routes>
-              <Route path="/" element={<HomePage />} />
+              <Route path="/" element={<WelcomePage />} />
               <Route path="/events" element={<EventsPage />} />
               <Route path="/travel" element={<TravelPage />} />
               <Route path="/hotels" element={<HotelsPage />} />

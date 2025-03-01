@@ -1,0 +1,133 @@
+/* General Styling */
+body {
+    font-family: "Playfair Display", serif;
+    background-color: #f8f5f0; /* Soft, romantic background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.welcome-heading {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.wedding-date {
+    font-size: 22px;
+    color: #fff;
+}
+
+/* Welcome Content */
+.welcome-content {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.welcome-subheading {
+    font-size: 32px;
+    color: rgba(0, 0, 51, 1);; /* Olive green */
+    margin-bottom: 15px;
+}
+
+.welcome-text {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Countdown Timer */
+.countdown-container {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.countdown-title {
+    font-size: 28px;
+    color: rgba(0, 0, 51, 1);;
+    margin-bottom: 20px;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.countdown-box {
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 80px;
+}
+
+.countdown-number {
+    font-size: 30px;
+    font-weight: bold;
+    color: #9b7653; /* Elegant gold accent */
+    display: block;
+}
+
+.countdown-label {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 400px;
+    }
+
+    .hero-overlay {
+        padding: 15px 30px;
+    }
+
+    .welcome-heading {
+        font-size: 36px;
+    }
+
+    .wedding-date {
+        font-size: 18px;
+    }
+
+    .countdown-timer {
+        flex-wrap: wrap;
+    }
+
+    .countdown-box {
+        min-width: 70px;
+        padding: 10px 15px;
+    }
+}
