@@ -5,7 +5,7 @@ const EventsPage = () => {
   return (
     <div className="events-container">
       <div className="scroll-wrapper">
-        <img src="/images/Location Gradola Beach Club (8).png" alt="Events Schedule" className="scrollable-image" />
+        <img src="/images/Location Gradola Beach Club (10).png" alt="Events Schedule" className="scrollable-image" />
       </div>
     </div>
   );
