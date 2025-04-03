@@ -77,6 +77,8 @@ const guestList = [
     { label: "Mr. Shehzad Khan", value: "Shehzad Khan", plusOnes: ["Mrs. Isabel Khan"] },
     { label: "Mrs. Karla Soriano", value: "Karla Soriano", plusOnes: ["Mr. Domenico Soriano"] },
     { label: "Mr. Philip Huffines", value: "Philip Huffines", plusOnes: ["Mrs. Holly Huffines"] },
+    { label: "Ms.Tiffany Solis", value: "Tiffany Solis", plusOnes: [] },
+
 ];
 
 export default guestList;
