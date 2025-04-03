@@ -76,6 +76,7 @@ const guestList = [
     { label: "Mr. Mr. Adam Konikowski", value: "Mr. Adam Konikowski", plusOnes: ["Mrs. Ashley Konikowski"] },
     { label: "Mr. Shehzad Khan", value: "Shehzad Khan", plusOnes: ["Mrs. Isabel Khan"] },
     { label: "Mrs. Karla Soriano", value: "Karla Soriano", plusOnes: ["Mr. Domenico Soriano"] },
+    { label: "Mr. Philip Huffines", value: "Philip Huffines", plusOnes: ["Mrs. Holly Huffines"] },
 ];
 
 export default guestList;
