@@ -61,7 +61,7 @@ const guestList = [
     { label: "Mr. Carl Schindewolf", value: "Carl Schindewolf", plusOnes: ["Mrs. Traci Schindewolf"] },
     { label: "Ms. Carley Cunningham", value: "Carley Cunningham", plusOnes: ["Mr. Hunter Brook"] },
     { label: "Mrs. Lisa Cunningham ", value: "Lisa Cunningham", plusOnes: ["Mr. Chris Cunningham"] }, 
-    { label: "Mr. Christopher Cunningham", value: "Christopher Cunningham", plusOnes: [] },
+    { label: "Mr. Christopher Cunningham", value: "Christopher Cunningham", plusOnes: ['Miss. May Guthrie'] },
     { label: "Miss. Fariha Ahmed", value: "Fariha Ahmed", plusOnes: ["Mr. Adeel Shams"] }, 
 
     { label: "Mr. Don Jordan", value:"Don Jordan", plusOnes: ["Mrs. Barbara Jordan"] },
@@ -78,7 +78,7 @@ const guestList = [
     { label: "Mrs. Karla Soriano", value: "Karla Soriano", plusOnes: ["Mr. Domenico Soriano"] },
     { label: "Mr. Philip Huffines", value: "Philip Huffines", plusOnes: ["Mrs. Holly Huffines"] },
     { label: "Ms.Tiffany Solis", value: "Tiffany Solis", plusOnes: [] },
-
+    { label: "Mr.Roy Bajtel", value: "Roy Bajtel", plusOnes: [] },
 ];
 
 export default guestList;
